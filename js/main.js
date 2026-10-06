@@ -1,13 +1,12 @@
-// --- 1. APLICAR TEMA INMEDIATAMENTE (Evita destellos blancos al cambiar de página) ---
+// APLICAR TEMA INMEDIATAMENTE (Evita destellos blancos al cambiar de página)
 if (localStorage.getItem('theme') === 'tokyo') {
   document.body.classList.add('tokyo-night');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 2. CONFIGURACIÓN DEL BOTÓN DE MODO OSCURO ---
+  // --- CONFIGURACIÓN DEL BOTÓN DE MODO OSCURO ---
   const themeBtn = document.getElementById('theme-toggle');
 
-  // Sincronizar el icono (Sol o Luna) según el estado actual del body
   if (themeBtn && document.body.classList.contains('tokyo-night')) {
     themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
   }
@@ -27,7 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 3. CUENTA ATRÁS PARA EL VIAJE ---
+  // --- MENÚ HAMBURGUESA ---
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const isOpened = navLinks.classList.contains('active');
+      menuToggle.innerHTML = isOpened ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+  }
+
+  // --- CUENTA ATRÁS ---
   const targetDate = new Date("April 1, 2027 11:30:00").getTime();
 
   const countdownInterval = setInterval(function () {
@@ -54,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1000);
 });
 
-// --- 4. LÓGICA DE TIENDA Y FORMULARIOS ---
+// --- LÓGICA DE TIENDA Y FORMULARIOS ---
 function calcTotal() {
   const v1 = parseInt(document.getElementById('item-sudadera')?.value) || 0;
   const v2 = parseInt(document.getElementById('item-taza')?.value) || 0;

@@ -9,12 +9,17 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-    <a href="logistica.html" class="active"><i class="fa-solid fa-plane"></i> Logística</a>
-    <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-    <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-    <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html" class="active"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
       <i class="fa-solid fa-moon"></i>
     </button>
@@ -39,24 +44,22 @@
             <li><strong>Salida Vuelta:</strong> 11:20 AM (Narita)</li>
           </ul>
         </div>
-
         <div class="info-card">
-          <h4><i class="fa-solid fa-bed"></i> Alojamiento en Tokio</h4>
+          <h4><i class="fa-solid fa-bed"></i> Alojamiento Tokio</h4>
           <ul>
             <li><strong>Hotel:</strong> Sakura Hostel Asakusa</li>
             <li><strong>Estancia:</strong> Días 1 al 4 (3 Noches)</li>
-            <li><strong>Distribución:</strong> Habitaciones múltiples (4-6 pax).</li>
-            <li><strong>Ubicación:</strong> A 5 mins del Templo Senso-ji.</li>
+            <li><strong>Distribución:</strong> Múltiples (4-6 pax).</li>
+            <li><strong>Ubicación:</strong> 5 mins Templo Senso-ji.</li>
           </ul>
         </div>
-
         <div class="info-card">
-          <h4><i class="fa-solid fa-hamsa"></i> Alojamiento en Kioto</h4>
+          <h4><i class="fa-solid fa-hamsa"></i> Alojamiento Kioto</h4>
           <ul>
             <li><strong>Hotel:</strong> Piece Hostel Sanjo</li>
             <li><strong>Estancia:</strong> Días 4 al 7 (3 Noches)</li>
-            <li><strong>Extras:</strong> Desayuno buffet incluido.</li>
-            <li><strong>Estilo:</strong> Ryokan moderno para el grupo.</li>
+            <li><strong>Extras:</strong> Desayuno buffet.</li>
+            <li><strong>Estilo:</strong> Ryokan moderno.</li>
           </ul>
         </div>
       </div>

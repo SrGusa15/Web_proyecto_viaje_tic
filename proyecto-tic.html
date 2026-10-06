@@ -9,12 +9,17 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-    <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-    <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-    <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-    <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
       <i class="fa-solid fa-moon"></i>
     </button>
@@ -31,21 +36,15 @@
       <div class="grid-3">
         <div class="info-card">
           <h4><i class="fa-solid fa-leaf"></i> Sostenibilidad</h4>
-          <p style="font-size: 0.9rem;">
-            Uso de red ferroviaria eléctrica (JR Pass) internamente para reducir huella de carbono. Digitalización completa de billetes sin papel.
-          </p>
+          <p style="font-size: 0.9rem;">Uso de red ferroviaria eléctrica (JR Pass) internamente para reducir huella de carbono.</p>
         </div>
         <div class="info-card">
           <h4><i class="fa-solid fa-wheelchair"></i> Accesibilidad</h4>
-          <p style="font-size: 0.9rem;">
-            Ruta adaptada para personas con movilidad reducida, priorizando estaciones equipadas con ascensores y hoteles accesibles.
-          </p>
+          <p style="font-size: 0.9rem;">Ruta adaptada para personas con movilidad reducida.</p>
         </div>
         <div class="info-card">
           <h4><i class="fa-solid fa-chart-gantt"></i> Gestión del Proyecto</h4>
-          <p style="font-size: 0.9rem;">
-            Planificación temporal con <strong>Microsoft Project</strong>, desglose de costes en <strong>Excel</strong> y memoria redactada en <strong>Word</strong>.
-          </p>
+          <p style="font-size: 0.9rem;">Planificación temporal con Microsoft Project, y costes en Excel.</p>
         </div>
       </div>
     </section>
@@ -55,15 +54,11 @@
       <div class="grid-2">
         <div class="info-card">
           <h4><i class="fa-solid fa-layer-group"></i> Arquitectura Modular</h4>
-          <p style="font-size: 0.9rem;">
-            Diseño estructurado en carpetas distribuidas (`/css`, `/js`), facilitando el mantenimiento y reutilización de estilos globales en las 5 páginas del sitio.
-          </p>
+          <p style="font-size: 0.9rem;">Diseño estructurado en carpetas distribuidas (css, js), facilitando el mantenimiento.</p>
         </div>
         <div class="info-card">
-          <h4><i class="fa-solid fa-gears"></i> Funcionalidades JS Dinámicas</h4>
-          <p style="font-size: 0.9rem;">
-            Implementación de la API Mapas CARTO mediante Leaflet, manipulaciones de DOM para carritos de compra y conmutador visual con `localStorage`.
-          </p>
+          <h4><i class="fa-solid fa-gears"></i> Funcionalidades JS</h4>
+          <p style="font-size: 0.9rem;">Implementación de API Mapas, manipulaciones de DOM y conmutador visual con localStorage.</p>
         </div>
       </div>
     </section>

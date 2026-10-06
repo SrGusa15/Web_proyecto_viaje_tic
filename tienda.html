@@ -9,12 +9,17 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-    <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-    <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-    <a href="tienda.html" class="active"><i class="fa-solid fa-shop"></i> Tienda</a>
-    <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html" class="active"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
       <i class="fa-solid fa-moon"></i>
     </button>
@@ -22,17 +27,15 @@
 
   <header>
     <h1><i class="fa-solid fa-hand-holding-dollar"></i> Financiación del Viaje</h1>
-    <p>Adquiere nuestro merchandising oficial para reducir el coste final del viaje para el alumnado.</p>
+    <p>Adquiere nuestro merchandising oficial para reducir el coste final del viaje.</p>
   </header>
 
   <div class="container">
     <section>
       <h2><i class="fa-solid fa-cart-shopping"></i> Cesta de Productos</h2>
-
       <div class="grid-2">
         <div class="store-panel">
           <h3 style="margin-bottom: 1.5rem;">Selecciona tus artículos</h3>
-
           <div class="product-row">
             <div>
               <strong><i class="fa-solid fa-shirt"></i> Sudadera Sakura</strong><br>
@@ -44,11 +47,10 @@
               <option value="50">2 (50€)</option>
             </select>
           </div>
-
           <div class="product-row">
             <div>
               <strong><i class="fa-solid fa-mug-hot"></i> Taza Conmemorativa</strong><br>
-              <span style="font-size: 0.85rem; opacity: 0.8;">Cerámica con mapa de la ruta.</span>
+              <span style="font-size: 0.85rem; opacity: 0.8;">Cerámica con mapa.</span>
             </div>
             <select id="item-taza" onchange="calcTotal()">
               <option value="0">0</option>
@@ -56,7 +58,6 @@
               <option value="20">2 (20€)</option>
             </select>
           </div>
-
           <div class="product-row">
             <div>
               <strong><i class="fa-solid fa-ticket-simple"></i> Papeleta Sorteo</strong><br>
@@ -69,21 +70,13 @@
               <option value="30">10 (30€)</option>
             </select>
           </div>
-
           <div class="total-box">Total: <span id="checkout-total">0</span> €</div>
           <button class="btn" onclick="sendOrder()">
             <i class="fa-brands fa-wpforms"></i> Procesar Pedido en Microsoft Forms
           </button>
         </div>
-
         <div>
-          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80"
-            alt="Japon"
-            style="width: 100%; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-          <div style="background: rgba(23, 162, 184, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid #17a2b8;">
-            <strong><i class="fa-solid fa-circle-info"></i> Pasarela con Microsoft Forms</strong><br>
-            El botón calcula el importe total en tiempo real y redirige al formulario oficial para registrar los datos del comprador.
-          </div>
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80" alt="Japon" style="width: 100%; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         </div>
       </div>
     </section>

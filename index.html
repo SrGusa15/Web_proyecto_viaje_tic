@@ -1,61 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | Viaje a Japón 2027</title>
+  <title>Viaje a Japón 2027 | Proyecto TIC</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <!-- Navegación unificada -->
-  <nav>
-    <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
-    <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-    <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-    <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-    <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
       <i class="fa-solid fa-moon"></i>
     </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-torii-gate"></i> Proyecto: Japón 2027</h1>
-    <p>Web oficial del viaje de Fin de Curso. Proyecto TIC - Sergio Obregón e Israel Velasco</p>
-
-    <!-- Cuenta Atrás -->
+    <h1>Viaje Fin de Curso: Japón 2027</h1>
+    <p>Proyecto interdisciplinar desarrollado para la asignatura de Tecnologías de la Información y la Comunicación (TIC).</p>
+    
     <div class="countdown-container">
       <div class="countdown-box"><span id="cd-days">00</span><small>Días</small></div>
       <div class="countdown-box"><span id="cd-hours">00</span><small>Horas</small></div>
-      <div class="countdown-box"><span id="cd-mins">00</span><small>Min</small></div>
-      <div class="countdown-box"><span id="cd-secs">00</span><small>Seg</small></div>
+      <div class="countdown-box"><span id="cd-mins">00</span><small>Minutos</small></div>
+      <div class="countdown-box"><span id="cd-secs">00</span><small>Segundos</small></div>
     </div>
   </header>
 
   <div class="container">
-    <section style="text-align: center;">
-      <h2>¡Bienvenidos al Proyecto Japón!</h2>
-      <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
-        Este sitio web recopila toda la información de nuestro viaje de estudios. Usa el menú superior para navegar por
-        los vuelos, descubrir la ruta interactiva por el país, o colaborar con la financiación comprando en nuestra
-        tienda online.
-      </p>
-      <div class="grid-3" style="margin-top: 2rem;">
-        <div class="info-card">
-          <h4><i class="fa-solid fa-calendar-days"></i> 7 Días de Aventura</h4>
-          <p>De los neones de Tokio a los templos de Kioto.</p>
+    <section>
+      <h2><i class="fa-solid fa-torii-gate"></i> El Destino: El País del Sol Naciente</h2>
+      <div class="grid-2">
+        <div>
+          <p style="margin-bottom: 1rem;">Nuestro viaje escolar de 7 días nos llevará a través del contraste absoluto de Japón: desde los rascacielos iluminados por neón de Akihabara hasta la tranquilidad ancestral de los templos de Kioto.</p>
+          <p>Esta plataforma centraliza toda la información logística del grupo, el itinerario geolocalizado en tiempo real y la pasarela oficial para la financiación a través de nuestra tienda escolar.</p>
         </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-bullseye"></i> Objetivo TIC</h4>
-          <p>Proyecto evaluable integrando HTML, CSS, JS y APIs externas.</p>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-handshake-angle"></i> Crowdfunding</h4>
-          <p>Ayúdanos a financiar los billetes con nuestra merch oficial.</p>
+        <div>
+          <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=80" alt="Tokio" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
         </div>
       </div>
     </section>
@@ -63,10 +54,8 @@
 
   <footer>
     <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-    <p style="margin-top: 10px; opacity: 0.7;">Sitio diseñado en HTML, CSS y JS.</p>
   </footer>
 
   <script src="js/main.js"></script>
 </body>
-
 </html>

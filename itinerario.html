@@ -10,12 +10,17 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-    <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-    <a href="itinerario.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-    <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-    <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
       <i class="fa-solid fa-moon"></i>
     </button>
@@ -28,68 +33,39 @@
 
   <div class="container">
     <section>
-      <h2><i class="fa-solid fa-earth-asia"></i> Mapa Geo-posicionado (CARTO API)</h2>
-      <p style="margin-bottom: 1.5rem; opacity: 0.8;">
-        Visualización geográfica desarrollada mediante Leaflet.js y capas raster Voyager de CARTO API.
-      </p>
+      <h2><i class="fa-solid fa-earth-asia"></i> Mapa Geo-posicionado</h2>
+      <p style="margin-bottom: 1.5rem; opacity: 0.8;">Desarrollado mediante Leaflet.js y capas raster Voyager de CARTO API.</p>
       <div id="map"></div>
     </section>
 
     <section>
       <h2><i class="fa-solid fa-calendar-days"></i> Planificación Día a Día</h2>
       <div class="timeline">
-
         <div class="timeline-item">
           <div class="timeline-date">Día 1: Llegada y Choque Cultural</div>
           <div class="timeline-content">
             <h4>Tokio: Shinjuku y Shibuya</h4>
-            <p><span class="time-badge">09:40</span> Aterrizaje en Narita y activación del <em>Japan Rail Pass</em>.</p>
+            <p><span class="time-badge">09:40</span> Aterrizaje en Narita y activación del Japan Rail Pass.</p>
             <p><span class="time-badge">12:30</span> Check-in en Sakura Hostel (Asakusa).</p>
             <p><span class="time-badge">16:00</span> Traslado a Shibuya. Cruce peatonal y estatua de Hachiko.</p>
-            <p><span class="time-badge">20:00</span> Cena grupal: Ramen en Omoide Yokocho (Shinjuku).</p>
           </div>
         </div>
-
         <div class="timeline-item">
           <div class="timeline-date">Día 2: Tradición vs Tecnología</div>
           <div class="timeline-content">
             <h4>Tokio: Asakusa y Akihabara</h4>
             <p><span class="time-badge">09:00</span> Visita al Templo Senso-ji y compras en Nakamise.</p>
-            <p><span class="time-badge">14:00</span> Tarde en Akihabara. Recorrido por salones recreativos SEGA/GiGO.</p>
-            <p><span class="time-badge">19:00</span> Visita a Odaiba para ver el Gundam Unicorn a escala real.</p>
+            <p><span class="time-badge">14:00</span> Tarde en Akihabara. Recorrido por salones recreativos.</p>
           </div>
         </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Día 3: La Montaña Sagrada</div>
-          <div class="timeline-content">
-            <h4>Excursión al Monte Fuji (Hakone)</h4>
-            <p><span class="time-badge">08:00</span> Salida hacia el Parque Nacional Fuji-Hakone-Izu.</p>
-            <p><span class="time-badge">11:30</span> Paseo en barco por el Lago Ashi.</p>
-            <p><span class="time-badge">16:00</span> Experiencia cultural: Baño relajante en un Onsen tradicional.</p>
-          </div>
-        </div>
-
         <div class="timeline-item">
           <div class="timeline-date">Día 4: Viaje a la Antigua Capital</div>
           <div class="timeline-content">
             <h4>Tren Bala a Kioto y Fushimi Inari</h4>
             <p><span class="time-badge">09:30</span> Trayecto en tren bala Shinkansen a 320 km/h.</p>
             <p><span class="time-badge">14:00</span> Check-in en Piece Hostel Sanjo.</p>
-            <p><span class="time-badge">16:30</span> Ascenso por el sendero de los toriis en Fushimi Inari-taisha.</p>
           </div>
         </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Días 5-7: Patrimonio, Ciervos y Regreso</div>
-          <div class="timeline-content">
-            <h4>Kioto, Nara y Vuelta a Casa</h4>
-            <p><strong>Día 5:</strong> Bosque de Bambú de Arashiyama y Pabellón Dorado (Kinkaku-ji).</p>
-            <p><strong>Día 6:</strong> Excursión a Nara para alimentar a los ciervos sika y visitar el Gran Buda de Todai-ji.</p>
-            <p><strong>Día 7:</strong> Regreso en tren al aeropuerto de Narita y vuelo de retorno a Madrid.</p>
-          </div>
-        </div>
-
       </div>
     </section>
   </div>
