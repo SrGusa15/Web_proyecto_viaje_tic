@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel TIC | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+    <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+    <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+    <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+    <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+
+  <header>
+    <h1><i class="fa-solid fa-folder-tree"></i> Criterios de Evaluación y Desarrollo</h1>
+    <p>Documentación técnica, competencias digitales aplicadas y memoria del proyecto escolar.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2><i class="fa-solid fa-square-check"></i> Cumplimiento de Rúbrica TIC</h2>
+      <div class="grid-3">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-leaf"></i> Sostenibilidad</h4>
+          <p style="font-size: 0.9rem;">
+            Uso de red ferroviaria eléctrica (JR Pass) internamente para reducir huella de carbono. Digitalización completa de billetes sin papel.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-wheelchair"></i> Accesibilidad</h4>
+          <p style="font-size: 0.9rem;">
+            Ruta adaptada para personas con movilidad reducida, priorizando estaciones equipadas con ascensores y hoteles accesibles.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-chart-gantt"></i> Gestión del Proyecto</h4>
+          <p style="font-size: 0.9rem;">
+            Planificación temporal con <strong>Microsoft Project</strong>, desglose de costes en <strong>Excel</strong> y memoria redactada en <strong>Word</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fa-solid fa-code"></i> Ficha Técnica del Desarrollo Web</h2>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-layer-group"></i> Arquitectura Modular</h4>
+          <p style="font-size: 0.9rem;">
+            Diseño estructurado en carpetas distribuidas (`/css`, `/js`), facilitando el mantenimiento y reutilización de estilos globales en las 5 páginas del sitio.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-gears"></i> Funcionalidades JS Dinámicas</h4>
+          <p style="font-size: 0.9rem;">
+            Implementación de la API Mapas CARTO mediante Leaflet, manipulaciones de DOM para carritos de compra y conmutador visual con `localStorage`.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

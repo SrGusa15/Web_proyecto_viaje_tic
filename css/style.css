@@ -1,0 +1,297 @@
+:root {
+  --primary: #D90429;
+  --secondary: #2B2D42;
+  --light-bg: #F8F9FA;
+  --text: #333333;
+  --accent: #8D99AE;
+  --card-bg: #FFFFFF;
+}
+
+/* ========================================= */
+/* MODO TOKYO NIGHT (DARK MODE)              */
+/* ========================================= */
+body.tokyo-night {
+  --light-bg: #0F172A;
+  --card-bg: #1E293B;
+  --text: #F8FAFC;
+  --secondary: #0B1120;
+  --primary: #FF2A54;
+}
+
+body.tokyo-night .timeline-content {
+  background: #1E293B;
+  color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+body.tokyo-night .info-card,
+body.tokyo-night .store-panel {
+  border-color: rgba(255,255,255,0.1);
+  background: var(--card-bg);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header con Imagen de Fondo y Capa de Contraste */
+header {
+  background: linear-gradient(rgba(43, 45, 66, 0.7), rgba(43, 45, 66, 0.7)),
+    url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: white;
+  padding: 7rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid var(--primary);
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Cuenta Atrás */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.countdown-box {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 90px;
+}
+
+.countdown-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.countdown-box small {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Nav */
+nav {
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--primary);
+}
+
+.btn-theme {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  color: var(--primary);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+section {
+  background: var(--card-bg);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.3s ease;
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body.tokyo-night h2 {
+  color: white;
+}
+
+h2::after {
+  content: "";
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), transparent);
+  margin-left: 15px;
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+
+/* Logística Cards */
+.info-card {
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h4 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-card ul { list-style: none; }
+.info-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  border-bottom: 1px dashed rgba(128,128,128,0.3);
+  padding-bottom: 0.5rem;
+}
+.info-card ul li:last-child { border: none; }
+
+/* Mapa CARTO */
+#map {
+  height: 450px;
+  width: 100%;
+  border-radius: 12px;
+  z-index: 1;
+  border: 2px solid var(--accent);
+}
+
+/* Timeline Itinerario */
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  border-left: 3px solid var(--primary);
+}
+.timeline-item { position: relative; margin-bottom: 2.5rem; }
+.timeline-item::before {
+  content: ""; position: absolute; left: -39px; top: 0; width: 20px; height: 20px;
+  background: var(--card-bg); border: 4px solid var(--primary); border-radius: 50%;
+}
+.timeline-date {
+  font-weight: bold; color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem;
+}
+.timeline-content {
+  background: var(--light-bg); padding: 1.5rem; border-radius: 8px;
+}
+.timeline-content h4 { color: var(--secondary); margin-bottom: 1rem; }
+body.tokyo-night .timeline-content h4 { color: white; }
+
+.time-badge {
+  background: var(--secondary); color: white; padding: 0.2rem 0.6rem;
+  border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;
+}
+
+/* Crowdfunding Form */
+.store-panel {
+  border: 1px solid #eee; padding: 2rem; border-radius: 12px;
+}
+.product-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 0; border-bottom: 1px solid rgba(128,128,128,0.2);
+}
+.product-row select {
+  padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc;
+  width: 80px; text-align: center; font-weight: bold;
+}
+.total-box {
+  font-size: 1.6rem; font-weight: bold; text-align: right;
+  margin: 1.5rem 0; color: var(--primary);
+}
+.btn {
+  background: var(--primary); color: white; border: none; padding: 1rem 2rem;
+  font-size: 1.1rem; font-weight: bold; border-radius: 8px; width: 100%;
+  cursor: pointer; transition: 0.3s; display: flex; align-items: center;
+  justify-content: center; gap: 10px;
+}
+.btn:hover { background: #B00322; }
+
+footer {
+  background: var(--secondary); color: white; text-align: center;
+  padding: 2rem; margin-top: 2rem;
+}
+
+/* ========================================= */
+/* ADAPTACIÓN PARA MÓVILES (RESPONSIVE)      */
+/* ========================================= */
+@media (max-width: 768px) {
+  header { padding: 4rem 1rem; }
+  header h1 { font-size: 2.2rem; }
+  header p { font-size: 1rem; }
+  nav { flex-direction: column; }
+  nav a, .btn-theme { padding: 0.8rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); width: 100%; }
+  .container { padding: 0 1rem; margin: 1.5rem auto; }
+  section { padding: 1.5rem; margin-bottom: 1.5rem; }
+  h2 { font-size: 1.5rem; }
+  #map { height: 300px; }
+  .timeline { padding-left: 1rem; margin-left: 5px; }
+  .timeline-item::before { left: -23px; width: 15px; height: 15px; border-width: 3px; }
+  .store-panel { padding: 1.2rem; }
+  .product-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .product-row select { align-self: flex-end; }
+  .total-box { font-size: 1.3rem; }
+  .btn { padding: 0.8rem 1rem; font-size: 1rem; }
+}
