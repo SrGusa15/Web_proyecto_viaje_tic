@@ -1,71 +1,87 @@
-// APLICAR TEMA INMEDIATAMENTE (Evita destellos blancos al cambiar de página)
+// Aplicar Tema Inmediatamente
 if (localStorage.getItem('theme') === 'tokyo') {
   document.body.classList.add('tokyo-night');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- CONFIGURACIÓN DEL BOTÓN DE MODO OSCURO ---
+  // --- MODO OSCURO ---
   const themeBtn = document.getElementById('theme-toggle');
-
   if (themeBtn && document.body.classList.contains('tokyo-night')) {
     themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
   }
-
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('tokyo-night');
       const isDark = document.body.classList.contains('tokyo-night');
-
-      if (isDark) {
-        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        localStorage.setItem('theme', 'tokyo');
-      } else {
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        localStorage.setItem('theme', 'light');
-      }
+      themeBtn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+      localStorage.setItem('theme', isDark ? 'tokyo' : 'light');
     });
   }
 
   // --- MENÚ HAMBURGUESA ---
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
-
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      const isOpened = navLinks.classList.contains('active');
-      menuToggle.innerHTML = isOpened ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+      menuToggle.innerHTML = navLinks.classList.contains('active') ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
     });
   }
 
-  // --- CUENTA ATRÁS ---
-  const targetDate = new Date("April 1, 2027 11:30:00").getTime();
+  // --- EFECTO SAKURA FALLING (Sin librerías externas) ---
+  const sakuraContainer = document.getElementById('sakura-container');
+  if (sakuraContainer) {
+    const totalPetals = 35; // Cantidad de pétalos simultáneos
+    for (let i = 0; i < totalPetals; i++) {
+      let petal = document.createElement('div');
+      petal.classList.add('sakura-petal');
+      
+      // Tamaño, posición y velocidad aleatoria
+      let size = Math.random() * 8 + 8; 
+      petal.style.width = size + 'px';
+      petal.style.height = (size * 1.5) + 'px';
+      petal.style.left = Math.random() * 100 + 'vw';
+      
+      // Tiempos aleatorios para que sea orgánico
+      petal.style.animationDuration = (Math.random() * 4 + 4) + 's, ' + (Math.random() * 3 + 2) + 's';
+      petal.style.animationDelay = (Math.random() * 5) + 's, ' + (Math.random() * 2) + 's';
+      
+      sakuraContainer.appendChild(petal);
+    }
+  }
 
-  const countdownInterval = setInterval(function () {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (document.getElementById("cd-days")) {
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
-      document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
-      document.getElementById("cd-mins").innerText = minutes < 10 ? "0" + minutes : minutes;
-      document.getElementById("cd-secs").innerText = seconds < 10 ? "0" + seconds : seconds;
-
-      if (distance < 0) {
-        clearInterval(countdownInterval);
-        const cdContainer = document.querySelector(".countdown-container");
-        if (cdContainer) cdContainer.innerHTML = "<h3>¡El avión ya ha despegado!</h3>";
+  // --- REVELADO LÍQUIDO AL HACER SCROLL (IntersectionObserver nativo) ---
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); // Solo animar la primera vez
       }
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // --- CUENTA ATRÁS CYBERPUNK ---
+  const targetDate = new Date("April 1, 2027 11:30:00").getTime();
+  const countdownInterval = setInterval(() => {
+    const distance = targetDate - new Date().getTime();
+    if (document.getElementById("cd-days") && distance > 0) {
+      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById("cd-days").innerText = d < 10 ? "0" + d : d;
+      document.getElementById("cd-hours").innerText = h < 10 ? "0" + h : h;
+      document.getElementById("cd-mins").innerText = m < 10 ? "0" + m : m;
+      document.getElementById("cd-secs").innerText = s < 10 ? "0" + s : s;
     }
   }, 1000);
 });
 
-// --- LÓGICA DE TIENDA Y FORMULARIOS ---
+// --- LÓGICA DE TIENDA ---
 function calcTotal() {
   const v1 = parseInt(document.getElementById('item-sudadera')?.value) || 0;
   const v2 = parseInt(document.getElementById('item-taza')?.value) || 0;
@@ -76,11 +92,10 @@ function calcTotal() {
 
 function sendOrder() {
   const totalBox = document.getElementById('checkout-total');
-  const total = totalBox ? totalBox.innerText : "0";
-  if (total === "0") {
+  if (totalBox && totalBox.innerText === "0") {
     alert("Por favor, selecciona al menos un producto antes de continuar.");
   } else {
-    alert(`¡Perfecto! Tu compra suma ${total}€.\n\nSerás redirigido al formulario de Microsoft Forms para indicar tu nombre, curso y método de pago.`);
+    alert(`¡Perfecto! Tu compra suma ${totalBox.innerText}€.\n\nSerás redirigido a Microsoft Forms.`);
     window.open("https://forms.office.com/", "_blank");
   }
 }
