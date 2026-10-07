@@ -9,6 +9,9 @@
 </head>
 <body>
 
+  <!-- Contenedor para el efecto Sakura Falling -->
+  <div id="sakura-container"></div>
+
   <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
     <button id="menu-toggle" class="btn-menu" title="Abrir menú">
       <i class="fa-solid fa-bars"></i>
@@ -31,7 +34,7 @@
   </header>
 
   <div class="container">
-    <section>
+    <section class="reveal">
       <h2><i class="fa-solid fa-square-check"></i> Cumplimiento de Rúbrica TIC</h2>
       <div class="grid-3">
         <div class="info-card">
@@ -49,7 +52,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="reveal">
       <h2><i class="fa-solid fa-code"></i> Ficha Técnica del Desarrollo Web</h2>
       <div class="grid-2">
         <div class="info-card">
@@ -58,8 +61,20 @@
         </div>
         <div class="info-card">
           <h4><i class="fa-solid fa-gears"></i> Funcionalidades JS</h4>
-          <p style="font-size: 0.9rem;">Implementación de API Mapas, manipulaciones de DOM y conmutador visual con localStorage.</p>
+          <p style="font-size: 0.9rem;">Implementación de API Mapas, animaciones nativas y conmutador visual con localStorage.</p>
         </div>
+      </div>
+      
+      <!-- Sección del Repositorio de GitHub -->
+      <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px dashed rgba(128,128,128,0.3);">
+        <h3 style="margin-bottom: 1rem; color: var(--secondary);">Control de Versiones y Código Fuente</h3>
+        <a href="https://github.com/SrGusa15/Web_proyecto_viaje_tic" target="_blank" class="btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: auto; padding: 1rem 2rem; background-color: #24292e; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1rem;">
+          <i class="fa-brands fa-github" style="font-size: 1.5rem;"></i>
+          <span>Ver Repositorio en GitHub</span>
+        </a>
+        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
+          El código completo del proyecto está alojado de forma pública para la revisión del profesorado.
+        </p>
       </div>
     </section>
   </div>
