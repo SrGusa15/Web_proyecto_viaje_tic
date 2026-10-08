@@ -1,4 +1,42 @@
-<div class="timeline">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerario | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="sakura-container"></div>
+
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+
+  <header>
+    <h1><i class="fa-solid fa-calendar-days"></i> Planificación Día a Día</h1>
+    <p>Itinerario escolar detallado de 5 días para la expedición a Japón 2027.</p>
+  </header>
+
+  <div class="container">
+    <section class="reveal">
+      <h2><i class="fa-solid fa-route"></i> Itinerario Detallado (5 Días)</h2>
+      
+      <div class="timeline">
         
         <div class="timeline-item">
           <div class="timeline-header">
@@ -63,3 +101,13 @@
         </div>
 
       </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
