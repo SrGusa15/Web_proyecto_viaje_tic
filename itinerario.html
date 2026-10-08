@@ -116,5 +116,25 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var mapElement = document.getElementById('map');
+      if (mapElement) {
+        var map = L.map('map').setView([35.3400, 137.6000], 6);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd',
+          maxZoom: 20
+        }).addTo(map);
+
+        L.marker([35.6762, 139.6503]).addTo(map)
+          .bindPopup('<b>Tokio</b><br>Llegada y tecnología.');
+
+        L.marker([35.0116, 135.7681]).addTo(map)
+          .bindPopup('<b>Kioto</b><br>Historia y tradición.');
+      }
+    });
+  </script>
 </body>
 </html>
