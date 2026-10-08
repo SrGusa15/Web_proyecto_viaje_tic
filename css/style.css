@@ -152,3 +152,31 @@ footer { background: var(--secondary); color: var(--accent); text-align: center;
   .nav-links.active { display: flex; }
   .nav-links a { width: 100%; padding: 1rem; text-align: left; border-top: 1px solid rgba(255, 255, 255, 0.1); }
 }
+/* ========================================= */
+/* ESTRUCTURA DEL ITINERARIO (TIMELINE)      */
+/* ========================================= */
+.timeline { position: relative; padding-left: 20px; border-left: 3px solid var(--primary); margin-top: 1.5rem; }
+.timeline-item { position: relative; margin-bottom: 2rem; padding-left: 20px; }
+
+/* El punto de la línea de tiempo */
+.timeline-item::before {
+  content: ''; position: absolute; left: -28px; top: 5px; width: 14px; height: 14px;
+  background: var(--card-bg); border: 3px solid var(--primary); border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.8rem; }
+.timeline-title { font-weight: bold; color: var(--secondary); font-size: 1.15rem; }
+body.tokyo-night .timeline-title { color: #FFF; }
+
+/* Etiqueta de la ciudad */
+.badge { background: var(--primary); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;}
+
+/* Caja de contenido de cada día */
+.timeline-content { background: #F1F5F9; padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(128,128,128,0.1); transition: transform 0.3s; }
+body.tokyo-night .timeline-content { background: #1E293B; color: #e2e8f0; border: 1px solid rgba(255,255,255,0.1); }
+
+/* Hover en las cajas del itinerario */
+.timeline-content:hover { transform: translateX(5px); }
+.timeline-content p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+.timeline-content p:last-child { margin-bottom: 0; }
