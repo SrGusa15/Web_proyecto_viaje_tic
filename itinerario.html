@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Itinerario | Viaje a Japón 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <div id="sakura-container"></div>
 
   <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
     <button id="menu-toggle" class="btn-menu" title="Abrir menú">
@@ -33,6 +32,13 @@
   </header>
 
   <div class="container">
+    
+    <section class="reveal">
+      <h2><i class="fa-solid fa-map-location"></i> Mapa Interactivo de la Ruta</h2>
+      <p style="font-size: 0.95rem; margin-bottom: 1rem;">Localización de los puntos clave del recorrido en Tokio y Kioto.</p>
+      <div id="map" style="height: 420px; width: 100%; border-radius: 12px; border: 1px solid rgba(128,128,128,0.2); z-index: 1;"></div>
+    </section>
+
     <section class="reveal">
       <h2><i class="fa-solid fa-route"></i> Itinerario Detallado (5 Días)</h2>
       
@@ -108,6 +114,7 @@
     <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
