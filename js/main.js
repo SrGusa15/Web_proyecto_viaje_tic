@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- CUENTA ATRÁS ---
   const targetDate = new Date("April 1, 2027 11:30:00").getTime();
 
-  const countdownInterval = setInterval(function () {
+  const countdownInterval = setInterval(function() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
@@ -63,6 +63,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }, 1000);
+  // --- EFECTO SAKURA ---
+  const sakuraContainer = document.getElementById('sakura-container');
+  if (sakuraContainer) {
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.classList.add('sakura-petal');
+
+      const size = Math.random() * 8 + 6;
+      petal.style.width = `${size}px`;
+      petal.style.height = `${size}px`;
+      petal.style.left = `${Math.random() * 100}vw`;
+      petal.style.animationDuration = `${Math.random() * 4 + 5}s`;
+
+      sakuraContainer.appendChild(petal);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 9000);
+    }
+    setInterval(createPetal, 400);
+  }
 });
 
 // --- LÓGICA DE TIENDA Y FORMULARIOS ---
