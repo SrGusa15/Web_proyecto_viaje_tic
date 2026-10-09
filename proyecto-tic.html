@@ -1,4 +1,56 @@
-<section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel TIC | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
+      <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+
+  <header>
+    <h1><i class="fa-solid fa-folder-tree"></i> Criterios de Evaluación y Desarrollo</h1>
+    <p>Documentación técnica, competencias digitales aplicadas y memoria del proyecto escolar.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2><i class="fa-solid fa-square-check"></i> Cumplimiento de Rúbrica TIC</h2>
+      <div class="grid-3">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-leaf"></i> Sostenibilidad</h4>
+          <p style="font-size: 0.9rem;">Uso de red ferroviaria eléctrica (JR Pass) internamente para reducir huella de carbono.</p>
+        </div>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-wheelchair"></i> Accesibilidad</h4>
+          <p style="font-size: 0.9rem;">Ruta adaptada para personas con movilidad reducida.</p>
+        </div>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-chart-gantt"></i> Gestión del Proyecto</h4>
+          <p style="font-size: 0.9rem;">Planificación temporal con Microsoft Project, y costes en Excel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <h2><i class="fa-solid fa-code"></i> Ficha Técnica del Desarrollo Web</h2>
       <div class="grid-3">
         <div class="info-card">
@@ -14,4 +66,20 @@
           <p style="font-size: 0.9rem;">Preparación de la infraestructura de una nueva sección del Blog para alojar el diario de viaje en un servidor local.</p>
         </div>
       </div>
+
+      <!-- Botón al Repositorio de GitHub -->
+      <div style="margin-top: 2rem; text-align: center;">
+        <a href="https://github.com/SrGusa15/Web_proyecto_viaje_tic" target="_blank" class="btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; width: auto; padding: 0.8rem 1.8rem; text-decoration: none;">
+          <i class="fa-brands fa-github" style="font-size: 1.2rem;"></i> Ver código fuente en GitHub
+        </a>
+      </div>
     </section>
+  </div>
+
+  <footer>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

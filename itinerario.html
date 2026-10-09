@@ -1,35 +1,92 @@
-<section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerario y Ruta | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+    </div>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+
+  <header>
+    <h1><i class="fa-solid fa-route"></i> Itinerario Interactivo</h1>
+    <p>Explora el recorrido paso a paso y la geolocalización de las paradas clave.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2><i class="fa-solid fa-earth-asia"></i> Mapa Geo-posicionado</h2>
+      <p style="margin-bottom: 1.5rem; opacity: 0.8;">Desarrollado mediante Leaflet.js y capas raster Voyager de CARTO API.</p>
+      <div id="map"></div>
+    </section>
+
+    <section>
       <h2><i class="fa-solid fa-calendar-days"></i> Planificación Día a Día</h2>
       <div class="timeline">
+        
         <div class="timeline-item">
           <div class="timeline-date">Días 1-2: Inmersión Neón</div>
           <div class="timeline-content">
             <h4>Tokio (Shibuya y Akihabara)</h4>
-            <p><span class="time-badge">Día 1</span> Llegada a Narita y recorrido por el cruce de Shibuya.</p>
-            <p><span class="time-badge">Día 2</span> Visita a los centros de electrónica y cultura otaku en Akihabara.</p>
+            <p><span class="time-badge">Día 1</span> Llegada al Aeropuerto de Narita, traslado a Asakusa y recorrido por el cruce de Shibuya.</p>
+            <p><span class="time-badge">Día 2</span> Visita al Templo Senso-ji y tarde en los centros de electrónica de Akihabara.</p>
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">Día 3: Naturaleza y Altura</div>
           <div class="timeline-content">
             <h4>Hakone y Monte Fuji</h4>
-            <p><span class="time-badge">Día 3</span> Excursión hacia la zona de Hakone para admirar los paisajes y la majestuosidad del Monte Fuji.</p>
+            <p><span class="time-badge">Día 3</span> Excursión hacia Hakone para admirar los paisajes volcánicos y las vistas al Monte Fuji.</p>
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">Días 4-5: Tradición Milenaria</div>
           <div class="timeline-content">
             <h4>Kioto (Fushimi Inari)</h4>
-            <p><span class="time-badge">Día 4</span> Llegada a la capital histórica y recorrido por los templos clásicos.</p>
-            <p><span class="time-badge">Día 5</span> Senderismo y visita fotográfica por los miles de toriis rojos del santuario Fushimi Inari.</p>
+            <p><span class="time-badge">Día 4</span> Trayecto en tren bala Shinkansen a Kioto y check-in en el alojamiento.</p>
+            <p><span class="time-badge">Día 5</span> Recorrido por los miles de toriis rojos del santuario Fushimi Inari-Taisha.</p>
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">Día 6: Naturaleza Sagrada</div>
           <div class="timeline-content">
             <h4>Nara (Parque de los Ciervos)</h4>
-            <p><span class="time-badge">Día 6</span> Encuentro con los ciervos sika en libertad y visita a las zonas sagradas del parque de Nara.</p>
+            <p><span class="time-badge">Día 6</span> Excursión a Nara para ver los ciervos sika en libertad y el templo Todai-ji.</p>
           </div>
         </div>
+
       </div>
     </section>
+  </div>
+
+  <footer>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
