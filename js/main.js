@@ -96,6 +96,6 @@ function sendOrder() {
     alert("Por favor, selecciona al menos un producto antes de continuar.");
   } else {
     alert(`¡Perfecto! Tu compra suma ${totalBox.innerText}€.\n\nSerás redirigido a Microsoft Forms.`);
-    window.open("https://forms.office.com/", "_blank");
+    window.open("https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=A3H7VxRR-k6SYabLwN9dcWkouIjjKOZNpHMugtHhLWdUM1hIVVFIWVg1OTdJRlQyTktIRDBaVk5HUC4u", "_blank");
   }
 }
