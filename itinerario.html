@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Itinerario | Viaje a Japón 2027</title>
+  <title>Itinerario | Expedición Japón 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS de Leaflet para el Mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,6 +20,7 @@
       <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
       <a href="itinerario.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
       <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
       <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
@@ -33,17 +35,19 @@
 
   <div class="container">
     
+    <!-- Mapa Interactivo Esri Dark -->
     <section class="reveal">
       <h2><i class="fa-solid fa-map-location"></i> Mapa Interactivo de la Ruta</h2>
       <p style="font-size: 0.95rem; margin-bottom: 1rem;">Localización de los puntos clave del recorrido en Tokio y Kioto.</p>
       <div id="map" style="height: 420px; width: 100%; border-radius: 12px; border: 1px solid rgba(128,128,128,0.2); z-index: 1;"></div>
     </section>
 
+    <!-- Itinerario de 5 días -->
     <section class="reveal">
       <h2><i class="fa-solid fa-route"></i> Itinerario Detallado (5 Días)</h2>
       
       <div class="timeline">
-        
+        <!-- DÍA 1 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <span class="timeline-title">Día 1: Llegada y Choque Cultural</span>
@@ -57,6 +61,7 @@
           </div>
         </div>
 
+        <!-- DÍA 2 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <span class="timeline-title">Día 2: Tradición vs Tecnología</span>
@@ -69,6 +74,7 @@
           </div>
         </div>
 
+        <!-- DÍA 3 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <span class="timeline-title">Día 3: Tokio Futuro y Vistas Panorámicas</span>
@@ -81,6 +87,7 @@
           </div>
         </div>
 
+        <!-- DÍA 4 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <span class="timeline-title">Día 4: Viaje a la Antigua Capital</span>
@@ -94,6 +101,7 @@
           </div>
         </div>
 
+        <!-- DÍA 5 -->
         <div class="timeline-item">
           <div class="timeline-header">
             <span class="timeline-title">Día 5: Patrimonio Histórico y Regreso</span>
@@ -105,7 +113,6 @@
             <p><strong>14:00</strong> Sesión grupal de evaluación del proyecto TIC y traslado al aeropuerto para el vuelo de regreso.</p>
           </div>
         </div>
-
       </div>
     </section>
   </div>
@@ -114,6 +121,7 @@
     <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
   </footer>
 
+  <!-- JS de Leaflet -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
   <script>
@@ -122,7 +130,7 @@
       if (mapElement) {
         var map = L.map('map').setView([35.3400, 137.6000], 6);
 
-        // Mapa de Esri Dark: Mismo estilo oscuro, sin marcas de agua ni APIs
+        // Mapa de Esri Dark: Estilo oscuro continuo, 100% gratuito sin llaves de API
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
           attribution: '&copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
           maxZoom: 16
