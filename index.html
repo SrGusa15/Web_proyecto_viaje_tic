@@ -3,56 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio | Expedición Japón 2027</title>
+  <title>Viaje a Japón 2027 | Proyecto TIC</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Contenedor Sakura exclusivo de la portada -->
-  <div id="sakura-container"></div>
-
-  <nav>
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
-        <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-        <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-      </div>
-      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-torii-gate"></i> Expedición Japón 2027</h1>
-    <p>Proyecto escolar interactivo: Descubriendo la tradición y vanguardia del País del Sol Naciente.</p>
+    <h1>Viaje Fin de Curso: Japón 2027</h1>
+    <p>Proyecto interdisciplinar desarrollado para la asignatura de Tecnologías de la Información y la Comunicación (TIC).</p>
+    
+    <div class="countdown-container">
+      <div class="countdown-box"><span id="cd-days">00</span><small>Días</small></div>
+      <div class="countdown-box"><span id="cd-hours">00</span><small>Horas</small></div>
+      <div class="countdown-box"><span id="cd-mins">00</span><small>Minutos</small></div>
+      <div class="countdown-box"><span id="cd-secs">00</span><small>Segundos</small></div>
+    </div>
   </header>
 
   <div class="container">
-    <section class="reveal" style="text-align: center; padding: 3rem 1.5rem;">
-      <h2>Bienvenido a la Web Oficial del Viaje</h2>
-      <p style="max-width: 650px; margin: 1rem auto 2rem; color: #cbd5e1;">
-        Plataforma desarrollada para la asignatura de Tecnologías de la Información y la Comunicación (TIC). Consulta la planificación, mapa interactivo, tienda de crowdfunding y el diario en servidor propio.
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="itinerario.html" class="btn-primary"><i class="fa-solid fa-map"></i> Ver Itinerario</a>
-        <a href="blog.html" class="btn-secondary"><i class="fa-solid fa-book-open"></i> Acceder al Diario</a>
+    <section>
+      <h2><i class="fa-solid fa-torii-gate"></i> El Destino: El País del Sol Naciente</h2>
+      <div class="grid-2">
+        <div>
+          <p style="margin-bottom: 1rem;">Nuestro viaje escolar de 7 días nos llevará a través del contraste absoluto de Japón: desde los rascacielos iluminados por neón de Akihabara hasta la tranquilidad ancestral de los templos de Kioto.</p>
+          <p>Esta plataforma centraliza toda la información logística del grupo, el itinerario geolocalizado en tiempo real y la pasarela oficial para la financiación a través de nuestra tienda escolar.</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=80" alt="Tokio" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
       </div>
     </section>
   </div>
 
   <footer>
-    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
-      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
-    </p>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
   </footer>
 
   <script src="js/main.js"></script>

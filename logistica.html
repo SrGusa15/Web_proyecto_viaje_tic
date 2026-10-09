@@ -3,70 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logística | Expedición Japón 2027</title>
+  <title>Logística y Reservas | Viaje a Japón 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav>
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-        <a href="logistica.html" class="active"><i class="fa-solid fa-plane"></i> Logística</a>
-        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-        <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-      </div>
-      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html" class="active"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-plane-departure"></i> Datos Logísticos del Viaje</h1>
-    <p>Planificación de transporte, alojamiento y movilidad interna.</p>
+    <h1><i class="fa-solid fa-ticket"></i> Logística y Alojamientos</h1>
+    <p>Detalles sobre los vuelos internacionales, conexiones de tren y distribución de hoteles.</p>
   </header>
 
   <div class="container">
-    <section class="reveal">
-      <h2><i class="fa-solid fa-ticket"></i> Transportes y Pasajes</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <h3 style="color: var(--primary);"><i class="fa-solid fa-plane-up"></i> Vuelos Principales</h3>
-          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Salida desde Madrid-Barajas (MAD) con escala internacional hasta el Aeropuerto Internacional de Narita (NRT).</p>
+    <section>
+      <h2><i class="fa-solid fa-plane-arrival"></i> Plan de Viaje y Alojamientos</h2>
+      <div class="grid-3">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-plane-departure"></i> Vuelos (Iberia / JAL)</h4>
+          <ul>
+            <li><strong>Ida (MAD-NRT):</strong> Vuelo IB281</li>
+            <li><strong>Salida:</strong> 11:30 AM (Madrid Barajas)</li>
+            <li><strong>Llegada:</strong> 09:40 AM (+1 Día) (Narita)</li>
+            <li><strong>Vuelta (NRT-MAD):</strong> Vuelo IB282</li>
+            <li><strong>Salida Vuelta:</strong> 11:20 AM (Narita)</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3 style="color: var(--primary);"><i class="fa-solid fa-train"></i> Japan Rail Pass</h3>
-          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Pase ilimitado de 7 días para la red de trenes bala Shinkansen y las líneas circulares Yamanote en Tokio.</p>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-bed"></i> Alojamiento Tokio</h4>
+          <ul>
+            <li><strong>Hotel:</strong> Sakura Hostel Asakusa</li>
+            <li><strong>Estancia:</strong> Días 1 al 4 (3 Noches)</li>
+            <li><strong>Distribución:</strong> Múltiples (4-6 pax).</li>
+            <li><strong>Ubicación:</strong> 5 mins Templo Senso-ji.</li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <section class="reveal">
-      <h2><i class="fa-solid fa-hotel"></i> Alojamientos Confirmados</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <h3 style="color: var(--primary);"><i class="fa-solid fa-building"></i> Tokio: Sakura Hostel Asakusa</h3>
-          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Habitaciones comunitarias para el grupo con sala de estudio y conexión a red de alta velocidad.</p>
-        </div>
-        <div class="card">
-          <h3 style="color: var(--primary);"><i class="fa-solid fa-house-chimney"></i> Kioto: Piece Hostel Sanjo</h3>
-          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Ubicación céntrica con rápido acceso a la Estación Central de Kioto y líneas principales de autobús.</p>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-hamsa"></i> Alojamiento Kioto</h4>
+          <ul>
+            <li><strong>Hotel:</strong> Piece Hostel Sanjo</li>
+            <li><strong>Estancia:</strong> Días 4 al 7 (3 Noches)</li>
+            <li><strong>Extras:</strong> Desayuno buffet.</li>
+            <li><strong>Estilo:</strong> Ryokan moderno.</li>
+          </ul>
         </div>
       </div>
     </section>
   </div>
 
   <footer>
-    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
-      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
-    </p>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
   </footer>
 
   <script src="js/main.js"></script>

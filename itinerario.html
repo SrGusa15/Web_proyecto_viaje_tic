@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Itinerario | Expedición Japón 2027</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- CSS de Leaflet para el Mapa -->
+  <title>Itinerario y Ruta | Viaje a Japón 2027</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +19,6 @@
       <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
       <a href="itinerario.html" class="active"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
       <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
       <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
     <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
@@ -29,88 +27,43 @@
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-calendar-days"></i> Planificación Día a Día</h1>
-    <p>Itinerario escolar detallado de 5 días para la expedición a Japón 2027.</p>
+    <h1><i class="fa-solid fa-route"></i> Itinerario Interactivo</h1>
+    <p>Explora el recorrido paso a paso y la geolocalización de las paradas clave.</p>
   </header>
 
   <div class="container">
-    
-    <!-- Mapa Interactivo Esri Dark -->
-    <section class="reveal">
-      <h2><i class="fa-solid fa-map-location"></i> Mapa Interactivo de la Ruta</h2>
-      <p style="font-size: 0.95rem; margin-bottom: 1rem;">Localización de los puntos clave del recorrido en Tokio y Kioto.</p>
-      <div id="map" style="height: 420px; width: 100%; border-radius: 12px; border: 1px solid rgba(128,128,128,0.2); z-index: 1;"></div>
+    <section>
+      <h2><i class="fa-solid fa-earth-asia"></i> Mapa Geo-posicionado</h2>
+      <p style="margin-bottom: 1.5rem; opacity: 0.8;">Desarrollado mediante Leaflet.js y capas raster Voyager de CARTO API.</p>
+      <div id="map"></div>
     </section>
 
-    <!-- Itinerario de 5 días -->
-    <section class="reveal">
-      <h2><i class="fa-solid fa-route"></i> Itinerario Detallado (5 Días)</h2>
-      
+    <section>
+      <h2><i class="fa-solid fa-calendar-days"></i> Planificación Día a Día</h2>
       <div class="timeline">
-        <!-- DÍA 1 -->
         <div class="timeline-item">
-          <div class="timeline-header">
-            <span class="timeline-title">Día 1: Llegada y Choque Cultural</span>
-            <span class="badge">Tokio</span>
-          </div>
+          <div class="timeline-date">Día 1: Llegada y Choque Cultural</div>
           <div class="timeline-content">
-            <p><strong>Tokio: Shinjuku y Shibuya</strong></p>
-            <p><strong>09:40</strong> Aterrizaje en Narita y activación del Japan Rail Pass.</p>
-            <p><strong>12:30</strong> Check-in en Sakura Hostel (Asakusa).</p>
-            <p><strong>16:00</strong> Traslado a Shibuya. Cruce peatonal y estatua de Hachiko.</p>
+            <h4>Tokio: Shinjuku y Shibuya</h4>
+            <p><span class="time-badge">09:40</span> Aterrizaje en Narita y activación del Japan Rail Pass.</p>
+            <p><span class="time-badge">12:30</span> Check-in en Sakura Hostel (Asakusa).</p>
+            <p><span class="time-badge">16:00</span> Traslado a Shibuya. Cruce peatonal y estatua de Hachiko.</p>
           </div>
         </div>
-
-        <!-- DÍA 2 -->
         <div class="timeline-item">
-          <div class="timeline-header">
-            <span class="timeline-title">Día 2: Tradición vs Tecnología</span>
-            <span class="badge">Cultura y Tecnología</span>
-          </div>
+          <div class="timeline-date">Día 2: Tradición vs Tecnología</div>
           <div class="timeline-content">
-            <p><strong>Tokio: Asakusa y Akihabara</strong></p>
-            <p><strong>09:00</strong> Visita al Templo Senso-ji y compras en Nakamise.</p>
-            <p><strong>14:00</strong> Tarde en Akihabara. Recorrido por salones recreativos y tiendas electrónicas.</p>
+            <h4>Tokio: Asakusa y Akihabara</h4>
+            <p><span class="time-badge">09:00</span> Visita al Templo Senso-ji y compras en Nakamise.</p>
+            <p><span class="time-badge">14:00</span> Tarde en Akihabara. Recorrido por salones recreativos.</p>
           </div>
         </div>
-
-        <!-- DÍA 3 -->
         <div class="timeline-item">
-          <div class="timeline-header">
-            <span class="timeline-title">Día 3: Tokio Futuro y Vistas Panorámicas</span>
-            <span class="badge">Vanguardia</span>
-          </div>
+          <div class="timeline-date">Día 4: Viaje a la Antigua Capital</div>
           <div class="timeline-content">
-            <p><strong>Tokio: Odaiba y Roppongi</strong></p>
-            <p><strong>10:00</strong> Visita a la isla artificial de Odaiba y museo interactivo teamLab.</p>
-            <p><strong>16:30</strong> Subida a la Tokyo Tower / Roppongi Hills para observar el atardecer sobre la megalópolis.</p>
-          </div>
-        </div>
-
-        <!-- DÍA 4 -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <span class="timeline-title">Día 4: Viaje a la Antigua Capital</span>
-            <span class="badge">Transporte e Historia</span>
-          </div>
-          <div class="timeline-content">
-            <p><strong>Tren Bala a Kioto y Fushimi Inari</strong></p>
-            <p><strong>09:30</strong> Trayecto en tren bala Shinkansen a 320 km/h con el JR Pass.</p>
-            <p><strong>14:00</strong> Check-in en Piece Hostel Sanjo.</p>
-            <p><strong>16:30</strong> Recorrido por los miles de torii rojos del Santuario Fushimi Inari-Taisha.</p>
-          </div>
-        </div>
-
-        <!-- DÍA 5 -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <span class="timeline-title">Día 5: Patrimonio Histórico y Regreso</span>
-            <span class="badge">Cierre del Viaje</span>
-          </div>
-          <div class="timeline-content">
-            <p><strong>Kioto: Arashiyama y Evaluación del Proyecto</strong></p>
-            <p><strong>09:00</strong> Visita al Bosque de Bambú de Arashiyama y Pabellón Dorado (Kinkaku-ji).</p>
-            <p><strong>14:00</strong> Sesión grupal de evaluación del proyecto TIC y traslado al aeropuerto para el vuelo de regreso.</p>
+            <h4>Tren Bala a Kioto y Fushimi Inari</h4>
+            <p><span class="time-badge">09:30</span> Trayecto en tren bala Shinkansen a 320 km/h.</p>
+            <p><span class="time-badge">14:00</span> Check-in en Piece Hostel Sanjo.</p>
           </div>
         </div>
       </div>
@@ -121,28 +74,8 @@
     <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
   </footer>
 
-  <!-- JS de Leaflet -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var mapElement = document.getElementById('map');
-      if (mapElement) {
-        var map = L.map('map').setView([35.3400, 137.6000], 6);
-
-        // Mapa de Esri Dark: Estilo oscuro continuo, 100% gratuito sin llaves de API
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-          attribution: '&copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-          maxZoom: 16
-        }).addTo(map);
-
-        L.marker([35.6762, 139.6503]).addTo(map)
-          .bindPopup('<b>Tokio</b><br>Llegada y tecnología.');
-
-        L.marker([35.0116, 135.7681]).addTo(map)
-          .bindPopup('<b>Kioto</b><br>Historia y tradición.');
-      }
-    });
-  </script>
 </body>
 </html>

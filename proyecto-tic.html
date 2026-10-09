@@ -3,85 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel TIC | Expedición Japón 2027</title>
+  <title>Panel TIC | Viaje a Japón 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav>
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-        <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-        <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-      </div>
-      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+      <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+      <i class="fa-solid fa-moon"></i>
+    </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-microchip"></i> Panel Técnico & Infraestructura TIC</h1>
-    <p>Documentación del despliegue en servidor propio y pasarela de formularios.</p>
+    <h1><i class="fa-solid fa-folder-tree"></i> Criterios de Evaluación y Desarrollo</h1>
+    <p>Documentación técnica, competencias digitales aplicadas y memoria del proyecto escolar.</p>
   </header>
 
   <div class="container">
-    
-    <!-- Memoria Técnica en Tarjetas -->
-    <section class="reveal">
-      <h2><i class="fa-solid fa-server"></i> Arquitectura del Proyecto</h2>
-      <div class="grid-cards">
-        
-        <div class="card">
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-brands fa-github"></i> Frontend Estático</h3>
-          <p style="font-size: 0.9rem;">Sitio web programado en HTML5, CSS3 y JavaScript vanilla en Neovim. Alojado y desplegado con integración continua en <strong>GitHub Pages</strong>.</p>
+    <section>
+      <h2><i class="fa-solid fa-square-check"></i> Cumplimiento de Rúbrica TIC</h2>
+      <div class="grid-3">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-leaf"></i> Sostenibilidad</h4>
+          <p style="font-size: 0.9rem;">Uso de red ferroviaria eléctrica (JR Pass) internamente para reducir huella de carbono.</p>
         </div>
-
-        <div class="card">
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-laptop"></i> Servidor On-Premise</h3>
-          <p style="font-size: 0.9rem;">Infraestructura física local alojada en una tablet servidor <strong>HP EliteBook</strong> ejecutando el entorno <strong>XAMPP (Apache + MySQL + PHP)</strong>.</p>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-wheelchair"></i> Accesibilidad</h4>
+          <p style="font-size: 0.9rem;">Ruta adaptada para personas con movilidad reducida.</p>
         </div>
-
-        <div class="card">
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-shield-halved"></i> Cloudflare Zero Trust</h3>
-          <p style="font-size: 0.9rem;">Exposición del servidor local a Internet mediante túnel inverso cifrado <strong>cloudflared</strong>, superando restricciones de CGNAT y cortafuegos de red escolar.</p>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-chart-gantt"></i> Gestión del Proyecto</h4>
+          <p style="font-size: 0.9rem;">Planificación temporal con Microsoft Project, y costes en Excel.</p>
         </div>
-
-        <div class="card">
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-map-location"></i> Cartografía Esri Dark</h3>
-          <p style="font-size: 0.9rem;">Motor de mapas interactivo con <strong>Leaflet.js</strong> consumiendo teselas oscuras de ArcGIS (World Dark Gray Base) sin dependencia de API keys restrictivas.</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- Integración del Formulario Oficial -->
-    <section class="reveal">
-      <h2><i class="fa-solid fa-clipboard-check"></i> Formulario Oficial de Pagos e Inscripción</h2>
-      <p style="margin-bottom: 1rem;">Formulario de procesador de pedidos y encuestas del proyecto integrado vía Microsoft Forms:</p>
-
-      <div class="forms-frame-wrapper">
-        <iframe 
-          src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=A3H7VxRR-k6SYabLwN9dcWkouIjjKOZNpHMugtHhLWdUM1hIVVFIWVg1OTdJRlQyTktIRDBaVk5HUC4u" 
-          allowfullscreen>
-        </iframe>
+    <section>
+      <h2><i class="fa-solid fa-code"></i> Ficha Técnica del Desarrollo Web</h2>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4><i class="fa-solid fa-layer-group"></i> Arquitectura Modular</h4>
+          <p style="font-size: 0.9rem;">Diseño estructurado en carpetas distribuidas (css, js), facilitando el mantenimiento.</p>
+        </div>
+        <div class="info-card">
+          <h4><i class="fa-solid fa-gears"></i> Funcionalidades JS</h4>
+          <p style="font-size: 0.9rem;">Implementación de API Mapas, manipulaciones de DOM y conmutador visual con localStorage.</p>
+        </div>
       </div>
     </section>
-
   </div>
 
   <footer>
-    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
-      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
-    </p>
+    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
   </footer>
 
   <script src="js/main.js"></script>
