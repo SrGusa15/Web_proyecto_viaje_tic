@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. GESTIÓN DEL MENÚ RESPONSIVE (Móviles)
+  // 1. MENÚ DESPLEGABLE EN MÓVILES
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
 
@@ -10,50 +10,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. EFECTO DE PÉTALOS DE SAKURA (Protegido)
-  // ¡Importante! Solo se ejecuta si existe el id="sakura-container" en el HTML
+  // 2. ANIMACIÓN DE SAKURA (SOLO SI EXISTE EL CONTENEDOR EN INDEX)
   const sakuraContainer = document.getElementById('sakura-container');
-  
   if (sakuraContainer) {
     function createPetal() {
       const petal = document.createElement('div');
       petal.classList.add('sakura-petal');
       
-      // Tamaño aleatorio entre 8px y 15px
-      const size = Math.random() * 7 + 8;
+      const size = Math.random() * 6 + 8;
       petal.style.width = `${size}px`;
       petal.style.height = `${size}px`;
-      
-      // Posición horizontal aleatoria
       petal.style.left = `${Math.random() * 100}vw`;
-      
-      // Duración de la caída aleatoria (entre 5 y 10 segundos)
-      petal.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      petal.style.animationDuration = `${Math.random() * 4 + 6}s`;
       
       sakuraContainer.appendChild(petal);
       
-      // Eliminar el pétalo cuando termine la animación para no saturar la RAM
       setTimeout(() => {
         petal.remove();
       }, 10000);
     }
-    
-    // Crear un pétalo nuevo cada 300 milisegundos
-    setInterval(createPetal, 300);
-  }
-
-  // 3. CAMBIO DE TEMA CLARO/OSCURO (Opcional por si lo necesitas en el futuro)
-  const themeToggle = document.getElementById('theme-toggle');
-  
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      // Como el tema base es oscuro (Tokyo Night), al hacer clic 
-      // podríamos añadir una clase 'light-mode' al body si la profesora lo pide.
-      // Por ahora, solo lanzamos una pequeña animación en el icono.
-      const icon = themeToggle.querySelector('i');
-      icon.classList.add('fa-spin');
-      setTimeout(() => icon.classList.remove('fa-spin'), 500);
-    });
+    setInterval(createPetal, 400);
   }
 
 });
+
+// 3. CALCULADORA INTERACTIVA DE PRECIOS PARA LA TIENDA
+const prices = {
+  sudadera: 25.0,
+  taza: 10.0,
+  papeleta: 2.0
+};
+
+const quantities = {
+  sudadera: 0,
+  taza: 0,
+  papeleta: 0
+};
+
+function updateQty(item, change) {
+  if (quantities[item] + change >= 0) {
+    quantities[item] += change;
+    const inputElement = document.getElementById(`qty-${item}`);
+    if (inputElement) {
+      inputElement.value = quantities[item];
+    }
+    calculateTotal();
+  }
+}
+
+function calculateTotal() {
+  const total = (quantities.sudadera * prices.sudadera) +
+                (quantities.taza * prices.taza) +
+                (quantities.papeleta * prices.papeleta);
+  
+  const totalElement = document.getElementById('total-price');
+  if (totalElement) {
+    totalElement.textContent = total.toFixed(2).replace('.', ',') + ' €';
+  }
+}

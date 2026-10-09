@@ -9,24 +9,26 @@
 </head>
 <body>
 
-  <!-- Contenedor para animación de pétalos de Sakura solo en Home -->
+  <!-- Contenedor Sakura exclusivo de la portada -->
   <div id="sakura-container"></div>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
+        <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+      </div>
+      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
   </nav>
 
   <header>
@@ -35,20 +37,22 @@
   </header>
 
   <div class="container">
-    <section class="reveal hero-section" style="text-align: center; padding: 3rem 1rem;">
+    <section class="reveal" style="text-align: center; padding: 3rem 1.5rem;">
       <h2>Bienvenido a la Web Oficial del Viaje</h2>
-      <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem; color: #cbd5e1;">
-        Plataforma desarrollada para la asignatura de Tecnologías de la Información y la Comunicación (TIC). Consulta la planificación, mapa interactivo, tienda de merchandising y nuestro diario colaborativo en tiempo real.
+      <p style="max-width: 650px; margin: 1rem auto 2rem; color: #cbd5e1;">
+        Plataforma desarrollada para la asignatura de Tecnologías de la Información y la Comunicación (TIC). Consulta la planificación, mapa interactivo, tienda de crowdfunding y el diario en servidor propio.
       </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-        <a href="itinerario.html" class="btn-submit" style="text-decoration: none;"><i class="fa-solid fa-map"></i> Ver Itinerario</a>
-        <a href="blog.html" class="btn-submit" style="text-decoration: none; background: #3b82f6;"><i class="fa-solid fa-book-open"></i> Acceder al Diario</a>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="itinerario.html" class="btn-primary"><i class="fa-solid fa-map"></i> Ver Itinerario</a>
+        <a href="blog.html" class="btn-secondary"><i class="fa-solid fa-book-open"></i> Acceder al Diario</a>
       </div>
     </section>
   </div>
 
   <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
+      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
+    </p>
   </footer>
 
   <script src="js/main.js"></script>

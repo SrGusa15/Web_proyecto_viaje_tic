@@ -9,72 +9,53 @@
 </head>
 <body>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html" class="active"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+        <a href="blog.html" class="active"><i class="fa-solid fa-camera-retro"></i> Diario</a>
+        <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+      </div>
+      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-book-open-reader"></i> Diario de la Expedición</h1>
-    <p>Blog colaborativo alojado en nuestro servidor local dedicado en tiempo real.</p>
+    <h1><i class="fa-solid fa-book-open"></i> Diario Colaborativo de Viaje</h1>
+    <p>Plataforma de publicaciones en vivo ejecutada sobre el servidor físico del proyecto.</p>
   </header>
 
   <div class="container">
     
-    <!-- Portal de acceso al Servidor Físico -->
-    <section class="reveal" style="text-align: center; background: rgba(30, 41, 59, 0.7); padding: 2.5rem 1.5rem; border-radius: 12px; border: 1px dashed rgba(255,255,255,0.2);">
-      <h2><i class="fa-solid fa-server" style="color: var(--primary);"></i> Servidor On-Premise en Vivo</h2>
-      <p style="margin: 1rem auto; max-width: 650px; color: #cbd5e1;">
-        Este blog se ejecuta físicamente sobre un servidor Windows local (HP EliteBook + XAMPP + WordPress) conectado a la red mediante un túnel seguro de <strong>Cloudflare Zero Trust</strong>.
+    <!-- Estado del Servidor Local -->
+    <section class="reveal" style="text-align: center; padding: 3rem 1.5rem;">
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.4rem 1rem; border-radius: 20px; font-weight: bold; margin-bottom: 1rem;">
+        <span style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; display: inline-block;"></span> Servidor Local Activo (HP EliteBook)
+      </div>
+      <h2>Acceso al Portal de Colaboradores</h2>
+      <p style="max-width: 600px; margin: 0.5rem auto 1.5rem; color: #94a3b8;">
+        Para redactar entradas, subir fotografías o editar contenido, pulsa el botón inferior para redirigirte al servidor WordPress desplegado mediante el túnel seguro de Cloudflare.
       </p>
       
-      <!-- Reemplaza el href con la URL que te arroje Cloudflare Tunnel en clase -->
-      <a href="https://tu-blog-japon.trycloudflare.com" target="_blank" class="btn-submit" style="display: inline-block; text-decoration: none; font-size: 1.1rem; padding: 1rem 2rem; margin-top: 1rem;">
-        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Diario Colaborativo (WordPress)
+      <a href="https://tu-blog-japon.trycloudflare.com" target="_blank" class="btn-primary">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Acceder al WordPress en Vivo
       </a>
     </section>
 
-    <!-- Muestra gráfica de publicaciones -->
-    <section class="reveal">
-      <h2>Entradas Destacadas</h2>
-      <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-        
-        <article class="blog-card" style="background: #1E293B; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-          <div class="blog-content" style="padding: 1.5rem;">
-            <span class="badge" style="margin-bottom: 0.5rem; display: inline-block;">Tecnología</span>
-            <h3>Explorando Akihabara Electric Town</h3>
-            <p class="blog-author" style="font-size: 0.85rem; color: #94a3b8; margin: 0.5rem 0;"><i class="fa-solid fa-user-pen"></i> Redactado por alumnos de TIC</p>
-            <p style="font-size: 0.95rem; color: #cbd5e1;">Publicación sobre los componentes de hardware y cultura otaku en el distrito electrónico de Tokio.</p>
-          </div>
-        </article>
-
-        <article class="blog-card" style="background: #1E293B; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-          <div class="blog-content" style="padding: 1.5rem;">
-            <span class="badge" style="margin-bottom: 0.5rem; display: inline-block;">Cultura</span>
-            <h3>Visita al Santuario Fushimi Inari</h3>
-            <p class="blog-author" style="font-size: 0.85rem; color: #94a3b8; margin: 0.5rem 0;"><i class="fa-solid fa-user-pen"></i> Redactado por alumnos de TIC</p>
-            <p style="font-size: 0.95rem; color: #cbd5e1;">Fotografías y grabaciones de los miles de Toriis rojos en las colinas de Kioto.</p>
-          </div>
-        </article>
-
-      </div>
-    </section>
   </div>
 
   <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
+      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
+    </p>
   </footer>
 
   <script src="js/main.js"></script>

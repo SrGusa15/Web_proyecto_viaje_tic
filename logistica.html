@@ -9,44 +9,64 @@
 </head>
 <body>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html" class="active"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="logistica.html" class="active"><i class="fa-solid fa-plane"></i> Logística</a>
+        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
+        <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+      </div>
+      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
   </nav>
 
   <header>
     <h1><i class="fa-solid fa-plane-departure"></i> Datos Logísticos del Viaje</h1>
-    <p>Planificación de transporte, alojamiento, costes y conectividad.</p>
+    <p>Planificación de transporte, alojamiento y movilidad interna.</p>
   </header>
 
   <div class="container">
     <section class="reveal">
       <h2><i class="fa-solid fa-ticket"></i> Transportes y Pasajes</h2>
-      <p><strong>Vuelos principales:</strong> Salida desde Madrid-Barajas (MAD) con escala a Narita (NRT).</p>
-      <p><strong>Movilidad interna:</strong> Uso de Japan Rail Pass (JR Pass) de 7 días para desplazamientos en trenes Shinkansen y línea Yamanote en Tokio.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <h3 style="color: var(--primary);"><i class="fa-solid fa-plane-up"></i> Vuelos Principales</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Salida desde Madrid-Barajas (MAD) con escala internacional hasta el Aeropuerto Internacional de Narita (NRT).</p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--primary);"><i class="fa-solid fa-train"></i> Japan Rail Pass</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Pase ilimitado de 7 días para la red de trenes bala Shinkansen y las líneas circulares Yamanote en Tokio.</p>
+        </div>
+      </div>
     </section>
 
     <section class="reveal">
       <h2><i class="fa-solid fa-hotel"></i> Alojamientos Confirmados</h2>
-      <p><strong>Tokio:</strong> Sakura Hostel Asakusa (Habitaciones compartidas con área común para el grupo escolar).</p>
-      <p><strong>Kioto:</strong> Piece Hostel Sanjo (Ubicación céntrica cercana a estaciones clave de autobús y metro).</p>
+      <div class="grid-cards">
+        <div class="card">
+          <h3 style="color: var(--primary);"><i class="fa-solid fa-building"></i> Tokio: Sakura Hostel Asakusa</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Habitaciones comunitarias para el grupo con sala de estudio y conexión a red de alta velocidad.</p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--primary);"><i class="fa-solid fa-house-chimney"></i> Kioto: Piece Hostel Sanjo</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">Ubicación céntrica con rápido acceso a la Estación Central de Kioto y líneas principales de autobús.</p>
+        </div>
+      </div>
     </section>
   </div>
 
   <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
+      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
+    </p>
   </footer>
 
   <script src="js/main.js"></script>

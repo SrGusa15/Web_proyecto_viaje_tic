@@ -9,80 +9,79 @@
 </head>
 <body>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-      <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+        <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
+        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
+        <a href="proyecto-tic.html" class="active"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+      </div>
+      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-microchip"></i> Panel Técnico y Documentación TIC</h1>
-    <p>Arquitectura de sistemas, infraestructura de red e integración de formularios.</p>
+    <h1><i class="fa-solid fa-microchip"></i> Panel Técnico & Infraestructura TIC</h1>
+    <p>Documentación del despliegue en servidor propio y pasarela de formularios.</p>
   </header>
 
   <div class="container">
     
-    <!-- Memoria Técnica del Proyecto -->
+    <!-- Memoria Técnica en Tarjetas -->
     <section class="reveal">
-      <h2><i class="fa-solid fa-diagram-project"></i> Arquitectura del Sistema</h2>
-      <div style="background: #1E293B; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem;">
+      <h2><i class="fa-solid fa-server"></i> Arquitectura del Proyecto</h2>
+      <div class="grid-cards">
         
-        <h3>1. Frontend Estático (GitHub Pages)</h3>
-        <p style="color: #cbd5e1; margin-bottom: 1rem;">
-          Desplegado sobre la red CDN de GitHub Pages. Implementa HTML5, CSS3 con variables dinámicas para modo oscuro y JavaScript vanilla sin librerías pesadas para garantizar la máxima velocidad de carga.
-        </p>
+        <div class="card">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-brands fa-github"></i> Frontend Estático</h3>
+          <p style="font-size: 0.9rem;">Sitio web programado en HTML5, CSS3 y JavaScript vanilla en Neovim. Alojado y desplegado con integración continua en <strong>GitHub Pages</strong>.</p>
+        </div>
 
-        <h3>2. Cartografía Interactiva (Esri Dark API)</h3>
-        <p style="color: #cbd5e1; margin-bottom: 1rem;">
-          Integración del motor de mapas <strong>Leaflet.js</strong> alimentado por los servidores geográficos de <strong>Esri ArcGIS (World Dark Gray Base)</strong>. Proporciona una interfaz estética en modo noche sin dependencia de APIs comerciales ni limitaciones de peticiones.
-        </p>
+        <div class="card">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-laptop"></i> Servidor On-Premise</h3>
+          <p style="font-size: 0.9rem;">Infraestructura física local alojada en una tablet servidor <strong>HP EliteBook</strong> ejecutando el entorno <strong>XAMPP (Apache + MySQL + PHP)</strong>.</p>
+        </div>
 
-        <h3>3. Servidor Local On-Premise y Blog Colaborativo</h3>
-        <p style="color: #cbd5e1; margin-bottom: 1rem;">
-          Infraestructura física montada sobre una tablet servidor <strong>HP EliteBook</strong> ejecutando el stack <strong>XAMPP (Apache + MySQL + PHP)</strong> con un CMS <strong>WordPress</strong> configurado multi-usuario.
-        </p>
+        <div class="card">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-shield-halved"></i> Cloudflare Zero Trust</h3>
+          <p style="font-size: 0.9rem;">Exposición del servidor local a Internet mediante túnel inverso cifrado <strong>cloudflared</strong>, superando restricciones de CGNAT y cortafuegos de red escolar.</p>
+        </div>
 
-        <h3>4. Enrutamiento y Seguridad (Cloudflare Tunnels)</h3>
-        <p style="color: #cbd5e1;">
-          Para exponer el servidor local a Internet sin abrir puertos en el router ni sufrir bloqueos por CGNAT o proxies escolares, se utiliza la herramienta daemon <code>cloudflared</code>. Establece un túnel inverso cifrado SSL (HTTPS) directo entre el equipo y la red global de Cloudflare.
-        </p>
+        <div class="card">
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-map-location"></i> Cartografía Esri Dark</h3>
+          <p style="font-size: 0.9rem;">Motor de mapas interactivo con <strong>Leaflet.js</strong> consumiendo teselas oscuras de ArcGIS (World Dark Gray Base) sin dependencia de API keys restrictivas.</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- Integración con Microsoft Forms -->
+    <!-- Integración del Formulario Oficial -->
     <section class="reveal">
-      <h2><i class="fa-solid fa-clipboard-question"></i> Formulario de Inscripción y Tienda</h2>
-      <p style="margin-bottom: 1.5rem;">Inscripciones oficiales, sugerencias y reserva de artículos alojados en Microsoft Forms.</p>
+      <h2><i class="fa-solid fa-clipboard-check"></i> Formulario Oficial de Pagos e Inscripción</h2>
+      <p style="margin-bottom: 1rem;">Formulario de procesador de pedidos y encuestas del proyecto integrado vía Microsoft Forms:</p>
 
-      <div style="width: 100%; background: #1E293B; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
-        <!-- Sustituye la URL del src por el enlace embed de tu Microsoft Forms -->
+      <div class="forms-frame-wrapper">
         <iframe 
-          src="https://forms.office.com/Pages/ResponsePage.aspx?id=TU_ID_AQUI" 
-          width="100%" 
-          height="600px" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0" 
-          style="border: none; max-width: 100%; border-radius: 8px;" 
+          src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=A3H7VxRR-k6SYabLwN9dcWkouIjjKOZNpHMugtHhLWdUM1hIVVFIWVg1OTdJRlQyTktIRDBaVk5HUC4u" 
           allowfullscreen>
         </iframe>
       </div>
     </section>
+
   </div>
 
   <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
+      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
+    </p>
   </footer>
 
   <script src="js/main.js"></script>

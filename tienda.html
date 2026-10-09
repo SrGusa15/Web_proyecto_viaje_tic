@@ -3,72 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda | Expedición Japón 2027</title>
+  <title>Tienda & Crowdfunding | Expedición Japón 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html" class="active"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+  <nav>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <button id="menu-toggle" class="btn-menu" title="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
+        <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
+        <a href="tienda.html" class="active"><i class="fa-solid fa-shop"></i> Tienda</a>
+        <a href="blog.html"><i class="fa-solid fa-camera-retro"></i> Diario</a>
+        <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
+      </div>
+      <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
   </nav>
 
   <header>
-    <h1><i class="fa-solid fa-store"></i> Tienda del Proyecto</h1>
-    <p>Reserva los productos oficiales del viaje para financiar la expedición escolar.</p>
+    <h1><i class="fa-solid fa-store"></i> Merchandising & Crowdfunding</h1>
+    <p>Apoya el proyecto escolar adquiriendo los productos oficiales para financiar el viaje a Japón.</p>
   </header>
 
   <div class="container">
+    
+    <!-- Catálogo de Productos -->
     <section class="reveal">
-      <h2>Catálogo de Artículos</h2>
-      <p style="margin-bottom: 2rem;">Haz tus reservas a través de nuestro formulario oficial en el Panel TIC.</p>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-        <div style="background: #1E293B; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+      <h2><i class="fa-solid fa-boxes-packing"></i> Catálogo Oficial</h2>
+      <div class="grid-cards">
+        
+        <div class="card" style="text-align: center;">
           <i class="fa-solid fa-shirt" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-          <h3>Camiseta Oficial</h3>
-          <p style="color: #cbd5e1; margin: 0.5rem 0;">Edición especial Japón 2027 en algodón 100%.</p>
-          <span style="font-size: 1.25rem; font-weight: bold; color: #fff;">15,00 €</span>
+          <h3>Sudadera Flor de Cerezo</h3>
+          <p style="margin: 0.5rem 0; font-size: 0.9rem;">Sudadera oficial con grabado de Sakura en espalda y bordado exclusivo.</p>
+          <span style="font-size: 1.3rem; font-weight: bold; color: #fff;">25,00 €</span>
         </div>
 
-        <div style="background: #1E293B; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+        <div class="card" style="text-align: center;">
           <i class="fa-solid fa-mug-hot" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-          <h3>Taza de Cerámica</h3>
-          <p style="color: #cbd5e1; margin: 0.5rem 0;">Diseño personalizado con la silueta del Monte Fuji.</p>
-          <span style="font-size: 1.25rem; font-weight: bold; color: #fff;">8,50 €</span>
+          <h3>Taza Mapa de la Ruta</h3>
+          <p style="margin: 0.5rem 0; font-size: 0.9rem;">Taza de cerámica con el mapa detallado del recorrido Tokio-Kioto.</p>
+          <span style="font-size: 1.3rem; font-weight: bold; color: #fff;">10,00 €</span>
         </div>
 
-        <div style="background: #1E293B; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
-          <i class="fa-solid fa-note-sticky" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-          <h3>Pack Stickers Akihabara</h3>
-          <p style="color: #cbd5e1; margin: 0.5rem 0;">Colección de 5 pegatinas vinílicas impermeables.</p>
-          <span style="font-size: 1.25rem; font-weight: bold; color: #fff;">3,00 €</span>
+        <div class="card" style="text-align: center;">
+          <i class="fa-solid fa-ticket" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+          <h3>Papeleta Sorteo Cesta Regalo</h3>
+          <p style="margin: 0.5rem 0; font-size: 0.9rem;">Participación para el Gran Sorteo de la Cesta de Productos de Japón.</p>
+          <span style="font-size: 1.3rem; font-weight: bold; color: #fff;">2,00 €</span>
         </div>
-      </div>
 
-      <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="proyecto-tic.html" class="btn-submit" style="text-decoration: none; display: inline-block;">
-          <i class="fa-solid fa-cart-shopping"></i> Ir a Formulario de Pedidos
-        </a>
       </div>
     </section>
+
+    <!-- Calculadora Interactiva de Pedidos -->
+    <section class="reveal">
+      <h2><i class="fa-solid fa-calculator"></i> Calculadora Interactiva de Precios</h2>
+      <p>Selecciona las cantidades que deseas reservar para calcular el importe total en tiempo real:</p>
+
+      <div class="calc-container">
+        
+        <div class="calc-row">
+          <div class="calc-item-info">
+            <h4>Sudadera Flor de Cerezo</h4>
+            <p>25,00 € por unidad</p>
+          </div>
+          <div class="qty-control">
+            <button class="btn-qty" onclick="updateQty('sudadera', -1)">-</button>
+            <input type="text" id="qty-sudadera" class="qty-input" value="0" readonly>
+            <button class="btn-qty" onclick="updateQty('sudadera', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div class="calc-item-info">
+            <h4>Taza Mapa de la Ruta</h4>
+            <p>10,00 € por unidad</p>
+          </div>
+          <div class="qty-control">
+            <button class="btn-qty" onclick="updateQty('taza', -1)">-</button>
+            <input type="text" id="qty-taza" class="qty-input" value="0" readonly>
+            <button class="btn-qty" onclick="updateQty('taza', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div class="calc-item-info">
+            <h4>Papeleta Sorteo Cesta Regalo</h4>
+            <p>2,00 € por unidad</p>
+          </div>
+          <div class="qty-control">
+            <button class="btn-qty" onclick="updateQty('papeleta', -1)">-</button>
+            <input type="text" id="qty-papeleta" class="qty-input" value="0" readonly>
+            <button class="btn-qty" onclick="updateQty('papeleta', 1)">+</button>
+          </div>
+        </div>
+
+        <div class="calc-total-box">
+          <div>
+            <span style="display: block; font-size: 0.9rem; color: #94a3b8;">Importe Total Estimado:</span>
+            <span id="total-price" class="total-price">0,00 €</span>
+          </div>
+          <!-- Enlace oficial directo al Microsoft Forms de pagos -->
+          <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=A3H7VxRR-k6SYabLwN9dcWkouIjjKOZNpHMugtHhLWdUM1hIVVFIWVg1OTdJRlQyTktIRDBaVk5HUC4u" target="_blank" class="btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Procesar Pedido en Microsoft Forms
+          </a>
+        </div>
+
+      </div>
+    </section>
+
   </div>
 
   <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
+    <p style="text-align: center; padding: 2rem 0; color: #64748b; font-size: 0.9rem;">
+      Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)
+    </p>
   </footer>
 
   <script src="js/main.js"></script>
