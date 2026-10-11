@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const petal = document.createElement('div');
       petal.classList.add('sakura-petal');
 
-      const size = Math.random() * 8 + 6;
+      const size = Math.random() * 16 + 12;
       petal.style.width = `${size}px`;
       petal.style.height = `${size}px`;
       petal.style.left = `${Math.random() * 100}vw`;
