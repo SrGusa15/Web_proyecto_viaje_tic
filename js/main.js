@@ -102,6 +102,6 @@ function sendOrder() {
     alert("Por favor, selecciona al menos un producto antes de continuar.");
   } else {
     alert(`¡Perfecto! Tu compra suma ${total}€.\n\nSerás redirigido al formulario de Microsoft Forms para indicar tu nombre, curso y método de pago.`);
-    window.open("https://forms.office.com/", "_blank");
+    window.open("https://forms.cloud.microsoft/e/9iJgHA9fBP", "_blank");
   }
 }
