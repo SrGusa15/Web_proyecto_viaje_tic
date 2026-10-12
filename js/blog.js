@@ -1,6 +1,6 @@
 // Configuración de la URL de la API de la tablet
 // NOTA: Cuando configuremos el túnel, cambiaremos esta URL local por la URL segura de Cloudflare/Tailscale
-const API_URL = "http://192.168.1";
+const API_URL = "https://midlands-msgid-auditor-dozens.trycloudflare.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     const formBlog = document.getElementById("form-blog");
