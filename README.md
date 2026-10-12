@@ -2,9 +2,8 @@
 
 **Asignatura:** Tecnologías de la Información y la Comunicación (TIC)  
 **Tipo de proyecto:** Aplicación web full-stack con alojamiento estático, API y base de datos local  
-**Web pública:** <https://srgusa15.github.io/Web_proyecto_viaje_tic/index.html>  
-**Repositorio:** <https://github.com/SrGusa15/Web_proyecto_viaje_tic>  
-**Fecha de documentación:** octubre de 2026
+**Web pública:** <https://srgusa15.github.io/Web_proyecto_viaje_tic/index.html>    
+**Fecha de documentación:** 12 de octubre de 2026
 
 > Esta memoria describe la implementación a partir de los archivos del frontend y del backend `app.py` facilitados para el proyecto. Cuando una característica depende de servicios externos o de la configuración del equipo, se indica expresamente.
 
