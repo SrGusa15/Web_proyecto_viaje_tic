@@ -32,17 +32,32 @@
   </header>
 
   <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-network-wired"></i> Sobre nuestro servidor</h2>
-      <p style="margin-bottom: 1rem;">Esta página servirá como punto de acceso al blog oficial de la expedición. Actualmente estamos preparando y configurando el servidor local donde se alojarán los contenidos de manera autónoma.</p>
-      <p>Próximamente conectaremos este apartado para ir subiendo:</p>
-      <ul style="margin-top: 1rem; margin-left: 2rem; line-height: 1.8;">
-        <li>Fotografías exclusivas y el día a día de nuestro grupo en Japón.</li>
-        <li>Anécdotas, información de las paradas y experiencias culturales.</li>
-        <li>Detalles técnicos del estado del servidor.</li>
-      </ul>
+    <!-- Formulario para escribir en el Diario (Backend) -->
+    <section style="margin-bottom: 2rem;">
+        <h2><i class="fa-solid fa-pen-to-square"></i> Nueva Entrada en el Diario</h2>
+        <form id="form-blog" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+            <div>
+                <label for="titulo" style="display:block; margin-bottom:0.5rem; font-weight:bold;">Título del Artículo:</label>
+                <input type="text" id="titulo" required style="width:100%; padding:0.5rem; border-radius:4px; border:1px solid #ccc; background: var(--card-bg); color: var(--text);">
+            </div>
+            <div>
+                <label for="contenido" style="display:block; margin-bottom:0.5rem; font-weight:bold;">Contenido:</label>
+                <textarea id="contenido" rows="5" required style="width:100%; padding:0.5rem; border-radius:4px; border:1px solid #ccc; background: var(--card-bg); color: var(--text);"></textarea>
+            </div>
+            <button type="submit" class="btn-theme" style="padding: 0.7rem 1.5rem; cursor: pointer; align-self: flex-start;">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Publicar en Servidor Local
+            </button>
+        </form>
     </section>
-  </div>
+
+    <!-- Contenedor donde aparecerán los artículos guardados -->
+    <section>
+        <h2><i class="fa-solid fa-network-wired"></i> Entradas del Diario (Desde HP ElitePad)</h2>
+        <div id="contenedor-posts" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1.5rem;">
+            <p id="cargando-posts"><i class="fa-solid fa-spinner fa-spin"></i> Conectando con el servidor local...</p>
+        </div>
+    </section>
+</div>
 
   <footer>
     <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
