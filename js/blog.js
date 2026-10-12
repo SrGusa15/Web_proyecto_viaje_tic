@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fa-solid fa-calendar-days"></i> Publicado el ${fechaFormat}
                     </small>
                     <p style="line-height: 1.6;">${post.contenido}</p>
+                    ${imgHtml}
                 `;
                 contenedorPosts.appendChild(article);
             });
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ titulo, contenido })
+                    body: JSON.stringify({ titulo, contenido, imagen })
                 });
 
                 if (response.ok) {
