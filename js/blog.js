@@ -26,6 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 article.className = "card"; // Aprovecha los estilos de tus tarjetas CSS
                 article.style.padding = "1.5rem";
                 article.style.borderRadius = "8px";
+                let imgHtml = "";
+                if (post.imagen) {
+                       imgHtml = <img src="${post.imagen}" style="width:100%; max-height:300px; object-fit:cover; border-radius:6px; margin-top:1rem;">;
+                }
                 
                 // Formatear la fecha
                 const fechaFormat = new Date(post.fecha).toLocaleDateString("es-ES", {
@@ -59,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             const titulo = document.getElementById("titulo").value;
             const contenido = document.getElementById("contenido").value;
+            const imagen = document.getElementById("imagen").value;
 
             try {
                 const response = await fetch(API_URL, {
