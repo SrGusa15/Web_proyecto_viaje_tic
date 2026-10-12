@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 article.style.borderRadius = "8px";
                 let imgHtml = "";
                 if (post.imagen) {
-                       imgHtml = `<img src="${post.imagen}" style="width:100%; max-height:300px; object-fit:cover; border-radius:6px; margin-top:1rem;">;
+                       imgHtml = `<img src="${post.imagen}" style="width:100%; max-height:300px; object-fit:cover; border-radius:6px; margin-top:1rem;">`;
                 }
                 
                 // Formatear la fecha
