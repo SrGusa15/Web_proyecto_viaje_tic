@@ -1,76 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logística y Reservas | Viaje a Japón 2027</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información de planificación de vuelos y alojamientos del viaje escolar a Japón 2027.">
+  <title>Logística y alojamientos | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-    </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links" id="nav-links"><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a><a href="logistica.html" class="active" aria-current="page"><i class="fa-solid fa-plane"></i> Logística</a><a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a><a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a><a href="blog.html"><i class="fa-solid fa-book-open"></i> Diario</a><a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a></div>
+    <button id="theme-toggle" class="btn-theme" title="Cambiar tema" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
   </nav>
-
-  <header>
-    <h1><i class="fa-solid fa-ticket"></i> Logística y Alojamientos</h1>
-    <p>Detalles sobre los vuelos internacionales, conexiones de tren y distribución de hoteles.</p>
+  <header class="page-hero">
+    <span class="eyebrow"><i class="fa-solid fa-ticket"></i> ANTES DE DESPEGAR</span>
+    <h1>Todo listo para la aventura</h1><p>La información logística del viaje, organizada en un único lugar para que el grupo pueda consultarla de un vistazo.</p>
+    <div class="hero-meta"><span><i class="fa-solid fa-plane"></i> Vuelos internacionales</span><span><i class="fa-solid fa-bed"></i> Alojamiento</span><span><i class="fa-solid fa-train"></i> Conexiones terrestres</span></div>
   </header>
-
-  <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-plane-arrival"></i> Plan de Viaje y Alojamientos</h2>
+  <main class="container">
+    <section aria-labelledby="logistica-title">
+      <p class="eyebrow-small">PLANIFICACIÓN DEL VIAJE</p><h2 id="logistica-title"><i class="fa-solid fa-plane-arrival"></i> Vuelos y alojamientos</h2>
       <div class="grid-3">
-        <div class="info-card">
-          <h4><i class="fa-solid fa-plane-departure"></i> Vuelos (Iberia / JAL)</h4>
-          <ul>
-            <li><strong>Ida (MAD-NRT):</strong> Vuelo IB281</li>
-            <li><strong>Salida:</strong> 11:30 AM (Madrid Barajas)</li>
-            <li><strong>Llegada:</strong> 09:40 AM (+1 Día) (Narita)</li>
-            <li><strong>Vuelta (NRT-MAD):</strong> Vuelo IB282</li>
-            <li><strong>Salida Vuelta:</strong> 11:20 AM (Narita)</li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-bed"></i> Alojamiento Tokio</h4>
-          <ul>
-            <li><strong>Hotel:</strong> Sakura Hostel Asakusa</li>
-            <li><strong>Estancia:</strong> Días 1 al 4 (3 Noches)</li>
-            <li><strong>Distribución:</strong> Múltiples (4-6 pax).</li>
-            <li><strong>Ubicación:</strong> 5 mins Templo Senso-ji.</li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-hamsa"></i> Alojamiento Kioto</h4>
-          <ul>
-            <li><strong>Hotel:</strong> Piece Hostel Sanjo</li>
-            <li><strong>Estancia:</strong> Días 4 al 7 (3 Noches)</li>
-            <li><strong>Extras:</strong> Desayuno buffet.</li>
-            <li><strong>Estilo:</strong> Ryokan moderno.</li>
-          </ul>
-        </div>
+        <article class="info-card"><h4><i class="fa-solid fa-plane-departure"></i> Vuelos · Iberia / JAL</h4><ul>
+          <li><strong>Ida (MAD–NRT):</strong> vuelo IB281</li><li><strong>Salida:</strong> 11:30 · Madrid-Barajas</li><li><strong>Llegada prevista:</strong> 09:40 del día siguiente · Narita</li><li><strong>Vuelta (NRT–MAD):</strong> vuelo IB282</li><li><strong>Salida de vuelta:</strong> 11:20 · Narita</li>
+        </ul></article>
+        <article class="info-card"><h4><i class="fa-solid fa-hotel"></i> Estancia en Tokio</h4><ul>
+          <li><strong>Alojamiento:</strong> Sakura Hostel Asakusa</li><li><strong>Plan previsto:</strong> días 1–4 (3 noches)</li><li><strong>Distribución:</strong> habitaciones múltiples (4–6 personas)</li><li><strong>Entorno:</strong> zona de Asakusa, próxima al templo Sensō-ji</li>
+        </ul></article>
+        <article class="info-card"><h4><i class="fa-solid fa-torii-gate"></i> Estancia en Kioto</h4><ul>
+          <li><strong>Alojamiento:</strong> Piece Hostel Sanjo</li><li><strong>Plan previsto:</strong> días 4–7 (3 noches)</li><li><strong>Extras indicados:</strong> desayuno buffet</li><li><strong>Estilo:</strong> hostel moderno con ambiente japonés</li>
+        </ul></article>
       </div>
     </section>
-  </div>
-
-  <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-  </footer>
-
+    <section aria-labelledby="prep-title">
+      <p class="eyebrow-small">CHECKLIST DEL VIAJERO</p><h2 id="prep-title"><i class="fa-solid fa-clipboard-check"></i> Preparativos recomendados</h2>
+      <div class="grid-3">
+        <article class="info-card"><h4><i class="fa-solid fa-passport"></i> Documentación</h4><p>Revisar pasaporte, autorizaciones familiares, seguro y los documentos que indique el centro antes de salir.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-suitcase-rolling"></i> Equipaje</h4><p>Confirmar con el grupo el límite de equipaje, ropa adecuada a la estación y los artículos necesarios para siete días.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-mobile-screen-button"></i> Conectividad</h4><p>Valorar una eSIM o tarjeta de datos, guardar direcciones útiles y descargar mapas para consultar sin conexión.</p></article>
+      </div>
+      <p class="map-note" style="margin-top:1rem"><i class="fa-solid fa-circle-info"></i><span>Los vuelos y alojamientos que aparecen en esta página son los datos de planificación introducidos en el proyecto. Antes de viajar, el grupo deberá verificar reservas, horarios y condiciones con la documentación oficial.</span></p>
+    </section>
+  </main>
+  <footer><p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p><p class="footer-japan">Made with <span aria-label="cariño">♥</span> for Japan 2027</p></footer>
   <script src="js/main.js"></script>
-</body>
-</html>
+</body></html>

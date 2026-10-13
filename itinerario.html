@@ -1,100 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Itinerario y Ruta | Viaje a Japón 2027</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mapa interactivo y planificación por días del viaje a Japón 2027.">
+  <title>Itinerario interactivo | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-    </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links" id="nav-links"><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a><a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a><a href="itinerario.html" class="active" aria-current="page"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a><a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a><a href="blog.html"><i class="fa-solid fa-book-open"></i> Diario</a><a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a></div>
+    <button id="theme-toggle" class="btn-theme" title="Cambiar tema" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
   </nav>
-
-  <header>
-    <h1><i class="fa-solid fa-route"></i> Itinerario Interactivo</h1>
-    <p>Explora el recorrido paso a paso y la geolocalización de las paradas clave.</p>
+  <header class="page-hero">
+    <span class="eyebrow"><i class="fa-solid fa-location-crosshairs"></i> LA RUTA, DÍA A DÍA</span><h1>Cuatro destinos.<br>Una aventura inolvidable.</h1>
+    <p>Explora las paradas principales del viaje y descubre el plan previsto para cada etapa, desde el Tokio urbano hasta los templos y paisajes históricos.</p>
+    <div class="hero-meta"><span><i class="fa-solid fa-map-pin"></i> Tokio</span><span><i class="fa-solid fa-mountain-sun"></i> Hakone</span><span><i class="fa-solid fa-torii-gate"></i> Kioto</span><span><i class="fa-solid fa-paw"></i> Nara</span></div>
   </header>
-
-  <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-earth-asia"></i> Mapa Geo-posicionado</h2>
-      <p style="margin-bottom: 1.5rem; opacity: 0.8;">Desarrollado mediante Leaflet.js y capas raster Voyager de CARTO API.</p>
-      <div id="map"></div>
-    </section>
-
-    <section>
-      <h2><i class="fa-solid fa-calendar-days"></i> Planificación Día a Día</h2>
+  <main class="container">
+    <section aria-labelledby="map-title"><p class="eyebrow-small">MAPA INTERACTIVO</p><h2 id="map-title"><i class="fa-solid fa-earth-asia"></i> Sigue el recorrido</h2><p class="map-note"><i class="fa-solid fa-circle-info"></i><span>El mapa utiliza Leaflet y cartografía de CARTO. Haz clic en cada marcador para ver el nombre de la parada.</span></p><div id="map" aria-label="Mapa interactivo de los destinos del viaje a Japón"></div></section>
+    <section aria-labelledby="timeline-title"><p class="eyebrow-small">SIETE DÍAS PARA DESCUBRIR JAPÓN</p><h2 id="timeline-title"><i class="fa-solid fa-calendar-days"></i> Planificación día a día</h2>
       <div class="timeline">
-        
-        <div class="timeline-item">
-          <div class="timeline-date">Días 1-2: Inmersión Neón</div>
-          <div class="timeline-content">
-            <h4>Tokio (Shibuya y Akihabara)</h4>
-            <p><span class="time-badge">Día 1</span> Llegada al Aeropuerto de Narita, traslado a Asakusa y recorrido por el cruce de Shibuya.</p>
-            <p><span class="time-badge">Día 2</span> Visita al Templo Senso-ji y tarde en los centros de electrónica de Akihabara.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Día 3: Naturaleza y Altura</div>
-          <div class="timeline-content">
-            <h4>Hakone y Monte Fuji</h4>
-            <p><span class="time-badge">Día 3</span> Excursión hacia Hakone para admirar los paisajes volcánicos y las vistas al Monte Fuji.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Días 4-5: Tradición Milenaria</div>
-          <div class="timeline-content">
-            <h4>Kioto (Fushimi Inari)</h4>
-            <p><span class="time-badge">Día 4</span> Trayecto en tren bala Shinkansen a Kioto y check-in en el alojamiento.</p>
-            <p><span class="time-badge">Día 5</span> Recorrido por los miles de toriis rojos del santuario Fushimi Inari-Taisha.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Día 6: Naturaleza Sagrada</div>
-          <div class="timeline-content">
-            <h4>Nara (Parque de los Ciervos)</h4>
-            <p><span class="time-badge">Día 6</span> Excursión a Nara para ver los ciervos sika en libertad y el templo Todai-ji.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Día 7: Vuelta a Casa</div>
-          <div class="timeline-content">
-            <h4>Aereopuerto</h4>
-            <p><span class="time-badge">Día 7</span> Reunión de evaluación y reflexión final para al final volver a madrid.</p>
-          </div>
-        </div>
-
+        <article class="timeline-item"><div class="timeline-date">Días 1–2 · Inmersión neón</div><div class="timeline-content"><h4>Tokio · Shibuya, Asakusa y Akihabara</h4><p><span class="time-badge">Día 1</span>Llegada al aeropuerto de Narita, traslado a Asakusa y primer recorrido por la ciudad, incluido el cruce de Shibuya.</p><p><span class="time-badge">Día 2</span>Visita al templo Sensō-ji y tarde para descubrir las tiendas y la cultura electrónica de Akihabara.</p></div></article>
+        <article class="timeline-item"><div class="timeline-date">Día 3 · Naturaleza y altura</div><div class="timeline-content"><h4>Hakone y vistas al monte Fuji</h4><p><span class="time-badge">Día 3</span>Excursión hacia Hakone para contemplar paisajes volcánicos y, si las condiciones lo permiten, vistas del monte Fuji.</p></div></article>
+        <article class="timeline-item"><div class="timeline-date">Días 4–5 · Tradición milenaria</div><div class="timeline-content"><h4>Kioto · Fushimi Inari</h4><p><span class="time-badge">Día 4</span>Traslado en tren bala Shinkansen a Kioto y llegada al alojamiento.</p><p><span class="time-badge">Día 5</span>Recorrido por los torii rojos del santuario Fushimi Inari-Taisha y exploración de la ciudad histórica.</p></div></article>
+        <article class="timeline-item"><div class="timeline-date">Día 6 · Naturaleza sagrada</div><div class="timeline-content"><h4>Nara · Parque de los ciervos</h4><p><span class="time-badge">Día 6</span>Excursión a Nara para conocer a los ciervos sika y visitar el entorno del templo Tōdai-ji.</p></div></article>
+        <article class="timeline-item"><div class="timeline-date">Día 7 · Hasta pronto, Japón</div><div class="timeline-content"><h4>Regreso a Madrid</h4><p><span class="time-badge">Día 7</span>Preparación del regreso y cierre de la experiencia antes de volver a casa.</p></div></article>
       </div>
+      <p class="map-note" style="margin-top:1.4rem"><i class="fa-solid fa-circle-info"></i><span>Este itinerario es una planificación orientativa del proyecto. Horarios, transportes y visitas se deberán confirmar antes del viaje.</span></p>
     </section>
-  </div>
-
-  <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-  </footer>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+  </main>
+  <footer><p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p><p class="footer-japan">Made with <span aria-label="cariño">♥</span> for Japan 2027</p></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="js/map.js"></script><script src="js/main.js"></script>
+</body></html>

@@ -1,92 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Oficial | Viaje a Japón 2027</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda de financiación del viaje escolar a Japón 2027: selecciona productos, calcula el total y continúa el pedido en Microsoft Forms.">
+  <title>Tienda del viaje | Viaje a Japón 2027</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-    </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links" id="nav-links"><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a><a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a><a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a><a href="tienda.html" class="active" aria-current="page"><i class="fa-solid fa-shop"></i> Tienda</a><a href="blog.html"><i class="fa-solid fa-book-open"></i> Diario</a><a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a></div>
+    <button id="theme-toggle" class="btn-theme" title="Cambiar tema" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
   </nav>
-
-  <header>
-    <h1><i class="fa-solid fa-hand-holding-dollar"></i> Financiación del Viaje</h1>
-    <p>Adquiere nuestro merchandising oficial para reducir el coste final del viaje.</p>
+  <header class="page-hero">
+    <span class="eyebrow"><i class="fa-solid fa-heart"></i> CADA PEDIDO SUMA</span><h1>Merchandising con destino a Japón.</h1><p>Elige tus artículos, revisa la cesta y continúa el pedido en el formulario oficial de Microsoft Forms.</p>
+    <div class="hero-meta"><span><i class="fa-solid fa-shirt"></i> Sudadera Sakura</span><span><i class="fa-solid fa-mug-hot"></i> Taza conmemorativa</span><span><i class="fa-solid fa-ticket"></i> Papeletas de sorteo</span></div>
   </header>
-
-  <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-cart-shopping"></i> Cesta de Productos</h2>
+  <main class="container">
+    <section aria-labelledby="products-title"><p class="eyebrow-small">TU SELECCIÓN</p><h2 id="products-title"><i class="fa-solid fa-basket-shopping"></i> Prepara tu cesta</h2>
       <div class="grid-2">
         <div class="store-panel">
-          <h3 style="margin-bottom: 1.5rem;">Selecciona tus artículos</h3>
-          <div class="product-row">
-            <div>
-              <strong><i class="fa-solid fa-shirt"></i> Sudadera Sakura</strong><br>
-              <span style="font-size: 0.85rem; opacity: 0.8;">Diseño exclusivo bordado.</span>
-            </div>
-            <select id="item-sudadera" onchange="calcTotal()">
-              <option value="0">0</option>
-              <option value="25">1 (25€)</option>
-              <option value="50">2 (50€)</option>
-            </select>
-          </div>
-          <div class="product-row">
-            <div>
-              <strong><i class="fa-solid fa-mug-hot"></i> Taza Conmemorativa</strong><br>
-              <span style="font-size: 0.85rem; opacity: 0.8;">Cerámica con mapa.</span>
-            </div>
-            <select id="item-taza" onchange="calcTotal()">
-              <option value="0">0</option>
-              <option value="10">1 (10€)</option>
-              <option value="20">2 (20€)</option>
-            </select>
-          </div>
-          <div class="product-row">
-            <div>
-              <strong><i class="fa-solid fa-ticket-simple"></i> Papeleta Sorteo</strong><br>
-              <span style="font-size: 0.85rem; opacity: 0.8;">Sorteo de cesta tecnológica.</span>
-            </div>
-            <select id="item-sorteo" onchange="calcTotal()">
-              <option value="0">0</option>
-              <option value="3">1 (3€)</option>
-              <option value="15">5 (15€)</option>
-              <option value="30">10 (30€)</option>
-            </select>
-          </div>
-          <div class="total-box">Total: <span id="checkout-total">0</span> €</div>
-          <button class="btn" onclick="sendOrder()">
-            <i class="fa-brands fa-wpforms"></i> Procesar Pedido en Microsoft Forms
-          </button>
+          <h3 style="margin-bottom:.2rem">Artículos solidarios</h3><p style="color:var(--accent);font-size:.88rem">Selecciona la cantidad de cada artículo. El total se actualizará automáticamente.</p>
+          <div class="product-row"><div class="product-copy"><i class="fa-solid fa-shirt" aria-hidden="true"></i><div><strong>Sudadera Sakura</strong><small>Diseño exclusivo bordado · 25 € / unidad</small></div></div><label><span class="sr-only">Cantidad de sudaderas</span><select id="item-sudadera" aria-label="Cantidad de sudaderas" onchange="calcTotal()"><option value="0">0 unidades · 0 €</option><option value="25">1 unidad · 25 €</option><option value="50">2 unidades · 50 €</option></select></label></div>
+          <div class="product-row"><div class="product-copy"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i><div><strong>Taza conmemorativa</strong><small>Diseño con mapa de Japón · 10 € / unidad</small></div></div><label><span class="sr-only">Cantidad de tazas</span><select id="item-taza" aria-label="Cantidad de tazas" onchange="calcTotal()"><option value="0">0 unidades · 0 €</option><option value="10">1 unidad · 10 €</option><option value="20">2 unidades · 20 €</option></select></label></div>
+          <div class="product-row"><div class="product-copy"><i class="fa-solid fa-ticket-simple" aria-hidden="true"></i><div><strong>Papeletas de sorteo</strong><small>Participación en el sorteo de una cesta tecnológica</small></div></div><label><span class="sr-only">Cantidad de papeletas</span><select id="item-sorteo" aria-label="Cantidad de papeletas" onchange="calcTotal()"><option value="0">0 papeletas · 0 €</option><option value="3">1 papeleta · 3 €</option><option value="15">5 papeletas · 15 €</option><option value="30">10 papeletas · 30 €</option></select></label></div>
+          <div class="total-box"><span><i class="fa-solid fa-receipt" style="color:var(--primary);margin-right:.4rem"></i> Total estimado</span><strong><span id="checkout-total">0</span> €</strong></div>
+          <p id="store-feedback" role="status" aria-live="polite" style="color:var(--accent);font-size:.84rem;margin-bottom:1rem">Tu cesta está vacía. Añade un artículo para empezar.</p>
+          <button class="btn" type="button" onclick="sendOrder()"><i class="fa-solid fa-cart-arrow-down"></i> Revisar pedido</button>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80" alt="Japon" style="width: 100%; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+          <div class="store-visual"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1000&q=85" alt="Vista urbana de Japón" loading="lazy"><div class="store-visual-caption"><strong>Un pequeño detalle, un gran viaje.</strong><span>Gracias por apoyar el proyecto de fin de curso.</span></div></div>
+          <div class="store-benefits"><div><i class="fa-solid fa-calculator"></i>Precio claro</div><div><i class="fa-solid fa-clipboard-check"></i>Revisión previa</div><div><i class="fa-brands fa-wpforms"></i>Pedido por Forms</div></div>
         </div>
       </div>
+      <p class="map-note" style="margin-top:1rem"><i class="fa-solid fa-circle-info"></i><span>Esta web calcula y prepara un resumen; no cobra ni registra el pedido. El envío definitivo de los datos se realiza en Microsoft Forms.</span></p>
     </section>
-  </div>
+  </main>
 
-  <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-  </footer>
+  <dialog id="order-dialog" class="order-dialog" aria-labelledby="order-dialog-title"><div class="order-dialog-inner">
+    <p class="eyebrow-small">ANTES DE CONTINUAR</p><h2 id="order-dialog-title"><i class="fa-solid fa-basket-shopping"></i> Revisa tu pedido</h2><p>Comprueba que los artículos y el importe sean correctos. Después se abrirá Microsoft Forms para completar los datos del pedido.</p>
+    <ul id="order-summary-list" class="order-summary-list"></ul>
+    <div class="order-dialog-total"><span>Total estimado</span><strong><span id="order-dialog-total">0</span> €</strong></div>
+    <div class="order-dialog-actions"><button type="button" class="action-button secondary" id="copy-order-summary"><i class="fa-regular fa-copy"></i> Copiar resumen</button><button type="button" class="action-button" id="continue-to-form"><i class="fa-brands fa-wpforms"></i> Continuar a Forms</button><button type="button" class="action-button secondary" id="close-order-dialog"><i class="fa-solid fa-arrow-left"></i> Volver a la cesta</button></div>
+    <p id="order-message" role="status" aria-live="polite"></p>
+  </div></dialog>
 
+  <footer><p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p><p class="footer-japan">Made with <span aria-label="cariño">♥</span> for Japan 2027</p></footer>
   <script src="js/main.js"></script>
-</body>
-</html>
+</body></html>

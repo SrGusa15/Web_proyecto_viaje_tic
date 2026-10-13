@@ -3,63 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La plataforma del viaje escolar a Japón 2027: cuenta atrás, logística, ruta, tienda y diario de viaje.">
   <title>Viaje a Japón 2027 | Proyecto TIC</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Contenedor para el efecto Sakura -->
-  <div id="sakura-container"></div>
-
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+  <div id="sakura-container" aria-hidden="true"></div>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="index.html" class="active" aria-current="page"><i class="fa-solid fa-house"></i> Inicio</a>
       <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
       <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
       <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
+      <a href="blog.html"><i class="fa-solid fa-book-open"></i> Diario</a>
       <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+    <button id="theme-toggle" class="btn-theme" title="Cambiar tema" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
   </nav>
 
-  <header>
-    <h1>Viaje Fin de Curso: Japón 2027</h1>
-    <p>Proyecto interdisciplinar desarrollado para la asignatura de Tecnologías de la Información y la Comunicación (TIC).</p>
-    
-    <div class="countdown-container">
-      <div class="countdown-box"><span id="cd-days">00</span><small>Días</small></div>
+  <header class="page-hero home-hero">
+    <span class="eyebrow"><i class="fa-solid fa-torii-gate"></i> TOKYO · HAKONE · KIOTO · NARA</span>
+    <h1>Japón nos espera.<br>La cuenta atrás ya ha empezado.</h1>
+    <p>La base de operaciones de nuestro viaje de fin de curso: una ruta entre neones, templos, trenes y recuerdos que aún están por escribir.</p>
+    <div class="hero-actions">
+      <a class="hero-link" href="itinerario.html"><i class="fa-solid fa-route"></i> Explorar el itinerario</a>
+      <a class="hero-quiet" href="blog.html"><i class="fa-solid fa-book-open"></i> Abrir el diario</a>
+    </div>
+    <div class="countdown-container" aria-label="Cuenta atrás para el viaje">
+      <div class="countdown-box"><span id="cd-days">000</span><small>Días</small></div>
       <div class="countdown-box"><span id="cd-hours">00</span><small>Horas</small></div>
       <div class="countdown-box"><span id="cd-mins">00</span><small>Minutos</small></div>
       <div class="countdown-box"><span id="cd-secs">00</span><small>Segundos</small></div>
     </div>
+    <div class="hero-meta"><span><i class="fa-regular fa-calendar"></i> 1 abril 2027 · 11:30</span><span><i class="fa-solid fa-location-dot"></i> Japón</span><span><i class="fa-solid fa-graduation-cap"></i> Proyecto escolar TIC</span></div>
   </header>
 
-  <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-torii-gate"></i> El Destino: El País del Sol Naciente</h2>
-      <div class="grid-2">
+  <main class="container">
+    <section aria-labelledby="welcome-title">
+      <p class="eyebrow-small">EL PRINCIPIO DE LA AVENTURA</p>
+      <h2 id="welcome-title"><i class="fa-solid fa-earth-asia"></i> Un viaje, mil historias</h2>
+      <div class="grid-2 welcome-grid">
         <div>
-          <p style="margin-bottom: 1rem;">Nuestro viaje escolar de 7 días nos llevará a través del contraste absoluto de Japón: desde los rascacielos iluminados por neón de Akihabara hasta la tranquilidad ancestral de los templos de Kioto.</p>
-          <p>Esta plataforma centraliza toda la información logística del grupo, el itinerario geolocalizado en tiempo real y la pasarela oficial para la financiación a través de nuestra tienda escolar.</p>
+          <p>Nuestro viaje escolar de siete días nos llevará del Tokio eléctrico a los paisajes de Hakone y a la tradición de Kioto y Nara.</p>
+          <p>Esta plataforma reúne la información práctica del grupo, el recorrido geolocalizado, la tienda de financiación y el diario donde quedarán guardados los recuerdos de la aventura.</p>
+          <div class="hero-actions" style="justify-content:flex-start">
+            <a class="action-button" href="logistica.html"><i class="fa-solid fa-suitcase"></i> Preparar el viaje</a>
+          </div>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=800&q=80" alt="Tokio" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <div class="store-visual">
+          <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=1200&q=85" alt="Calles y arquitectura de Tokio" loading="lazy">
+          <div class="store-visual-caption"><strong>El País del Sol Naciente</strong><span>Tradición milenaria. Energía futurista. Una experiencia compartida.</span></div>
         </div>
       </div>
     </section>
-  </div>
 
-  <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-  </footer>
+    <section aria-labelledby="explore-title">
+      <p class="eyebrow-small">ACCESOS RÁPIDOS</p>
+      <h2 id="explore-title"><i class="fa-solid fa-compass"></i> Explora la plataforma</h2>
+      <div class="grid-3">
+        <a class="info-card feature-card" href="logistica.html"><span class="feature-icon"><i class="fa-solid fa-plane-departure"></i></span><h3>Logística</h3><p>Consulta la planificación de vuelos y alojamientos.</p><span class="feature-more">Ver detalles <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="info-card feature-card" href="itinerario.html"><span class="feature-icon"><i class="fa-solid fa-map-location-dot"></i></span><h3>Itinerario</h3><p>Recorre el mapa y descubre qué está previsto para cada día.</p><span class="feature-more">Ver la ruta <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="info-card feature-card" href="tienda.html"><span class="feature-icon"><i class="fa-solid fa-bag-shopping"></i></span><h3>Tienda solidaria</h3><p>Explora los artículos y calcula tu pedido para apoyar el viaje.</p><span class="feature-more">Abrir tienda <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="info-card feature-card" href="blog.html"><span class="feature-icon"><i class="fa-solid fa-book-open"></i></span><h3>Diario de viaje</h3><p>Un cuaderno digital para conservar las historias y fotografías.</p><span class="feature-more">Leer historias <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="info-card feature-card" href="proyecto-tic.html"><span class="feature-icon"><i class="fa-solid fa-code"></i></span><h3>Panel TIC</h3><p>Descubre las tecnologías y decisiones detrás de la web.</p><span class="feature-more">Ver el proyecto <i class="fa-solid fa-arrow-right"></i></span></a>
+        <div class="info-card feature-card"><span class="feature-icon"><i class="fa-solid fa-heart"></i></span><h3>Hecho en equipo</h3><p>Una iniciativa escolar que combina organización, tecnología y ganas de descubrir.</p><span class="feature-more">Viaje a Japón 2027</span></div>
+      </div>
+    </section>
+  </main>
 
+  <footer><p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p><p class="footer-japan">Made with <span aria-label="cariño">♥</span> for Japan 2027</p></footer>
   <script src="js/main.js"></script>
 </body>
 </html>

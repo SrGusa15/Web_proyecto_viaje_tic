@@ -1,85 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tecnologías, arquitectura y criterios del proyecto escolar Viaje a Japón 2027.">
   <title>Panel TIC | Viaje a Japón 2027</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
-      <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
-      <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html"><i class="fa-solid fa-server"></i> Blog</a>
-      <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
-    </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links" id="nav-links"><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a><a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a><a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a><a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a><a href="blog.html"><i class="fa-solid fa-book-open"></i> Diario</a><a href="proyecto-tic.html" class="active" aria-current="page"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a></div>
+    <button id="theme-toggle" class="btn-theme" title="Cambiar tema" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
   </nav>
-
-  <header>
-    <h1><i class="fa-solid fa-folder-tree"></i> Criterios de Evaluación y Desarrollo</h1>
-    <p>Documentación técnica, competencias digitales aplicadas y memoria del proyecto escolar.</p>
+  <header class="page-hero">
+    <span class="eyebrow"><i class="fa-solid fa-code"></i> CÓMO ESTÁ CONSTRUIDO</span><h1>Detrás del viaje hay tecnología.</h1><p>Una mirada al trabajo de planificación, diseño y desarrollo realizado para convertir una idea de viaje en una plataforma web interactiva.</p>
+    <div class="hero-meta"><span><i class="fa-brands fa-html5"></i> HTML · CSS · JS</span><span><i class="fa-brands fa-python"></i> Python · Flask</span><span><i class="fa-solid fa-database"></i> SQLite</span></div>
   </header>
-
-  <div class="container">
-    <section>
-      <h2><i class="fa-solid fa-square-check"></i> Cumplimiento de Rúbrica TIC</h2>
+  <main class="container">
+    <section aria-labelledby="rubric-title"><p class="eyebrow-small">PROYECTO ESCOLAR</p><h2 id="rubric-title"><i class="fa-solid fa-square-check"></i> Criterios y competencias TIC</h2>
       <div class="grid-3">
-        <div class="info-card">
-          <h4><i class="fa-solid fa-leaf"></i> Sostenibilidad</h4>
-          <p style="font-size: 0.9rem;">Uso de red ferroviaria eléctrica (JR Pass) internamente para reducir huella de carbono.</p>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-wheelchair"></i> Accesibilidad</h4>
-          <p style="font-size: 0.9rem;">Ruta adaptada para personas con movilidad reducida.</p>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-chart-gantt"></i> Gestión del Proyecto</h4>
-          <p style="font-size: 0.9rem;">Planificación temporal con Microsoft Project, y costes en Excel.</p>
-        </div>
+        <article class="info-card"><h4><i class="fa-solid fa-leaf"></i> Sostenibilidad</h4><p>El proyecto contempla el uso de transporte ferroviario para los desplazamientos internos cuando la planificación final lo permita.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-universal-access"></i> Accesibilidad</h4><p>La información se organiza en páginas y bloques claros, con diseño adaptable a pantallas grandes, tabletas y móviles.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-chart-gantt"></i> Gestión del proyecto</h4><p>La planificación del itinerario, las tareas y el control de costes forman parte del trabajo interdisciplinar.</p></article>
       </div>
     </section>
-
-    <section>
-      <h2><i class="fa-solid fa-code"></i> Ficha Técnica del Desarrollo Web</h2>
+    <section aria-labelledby="stack-title"><p class="eyebrow-small">ARQUITECTURA</p><h2 id="stack-title"><i class="fa-solid fa-layer-group"></i> Tecnologías utilizadas</h2>
       <div class="grid-3">
-        <div class="info-card">
-          <h4><i class="fa-solid fa-layer-group"></i> Arquitectura Modular</h4>
-          <p style="font-size: 0.9rem;">Diseño estructurado en carpetas distribuidas (css, js), facilitando el mantenimiento.</p>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-gears"></i> Funcionalidades JS</h4>
-          <p style="font-size: 0.9rem;">Implementación de API Mapas, manipulaciones de DOM y conmutador visual con localStorage.</p>
-        </div>
-        <div class="info-card">
-          <h4><i class="fa-solid fa-server"></i> Servidor para el Blog</h4>
-          <p style="font-size: 0.9rem;">Preparación de la infraestructura de una nueva sección del Blog para alojar el diario de viaje en un servidor local.</p>
-        </div>
-      </div>
-
-      <!-- Botón al Repositorio de GitHub -->
-      <div style="margin-top: 2rem; text-align: center;">
-        <a href="https://github.com/SrGusa15/Web_proyecto_viaje_tic" target="_blank" class="btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; width: auto; padding: 0.8rem 1.8rem; text-decoration: none;">
-          <i class="fa-brands fa-github" style="font-size: 1.2rem;"></i> Ver código fuente en GitHub
-        </a>
+        <article class="info-card"><h4><i class="fa-brands fa-html5"></i> HTML5 y CSS3</h4><p>Estructura semántica, estilos compartidos, variables de diseño, distribución en rejillas y adaptación responsive.</p></article>
+        <article class="info-card"><h4><i class="fa-brands fa-js"></i> JavaScript</h4><p>Cuenta atrás, menú móvil, preferencia de tema, cálculo de la tienda, mapa y comunicación con el diario.</p></article>
+        <article class="info-card"><h4><i class="fa-brands fa-python"></i> Flask y SQLite</h4><p>API del diario alojada en un equipo propio y persistencia de entradas en una base de datos ligera.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-map"></i> Leaflet y CARTO</h4><p>Mapa interactivo con marcadores geográficos para las principales paradas del recorrido.</p></article>
+        <article class="info-card"><h4><i class="fa-brands fa-github"></i> GitHub Pages</h4><p>Versionado del código y publicación estática del frontend desde el repositorio.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-shield-halved"></i> Cloudflare Tunnel</h4><p>Acceso HTTPS al backend local sin publicar directamente un puerto del router. El túnel debe permanecer activo.</p></article>
       </div>
     </section>
-  </div>
-
-  <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-  </footer>
-
+    <section aria-labelledby="architecture-title"><p class="eyebrow-small">DEL NAVEGADOR A LA BASE DE DATOS</p><h2 id="architecture-title"><i class="fa-solid fa-diagram-project"></i> Cómo se conectan las piezas</h2>
+      <div class="grid-3">
+        <article class="info-card"><h4><i class="fa-solid fa-display"></i> 01 · Frontend</h4><p>GitHub Pages entrega HTML, CSS y JavaScript al navegador del visitante.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-arrow-right-arrow-left"></i> 02 · API</h4><p>El script del diario solicita datos por HTTPS a través del túnel de Cloudflare.</p></article>
+        <article class="info-card"><h4><i class="fa-solid fa-database"></i> 03 · Persistencia</h4><p>Flask procesa las peticiones y almacena las entradas en SQLite en la tablet HP ElitePad.</p></article>
+      </div>
+      <div class="hero-actions" style="justify-content:flex-start"><a class="action-button" href="https://github.com/SrGusa15/Web_proyecto_viaje_tic" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Ver código fuente</a><a class="action-button secondary" href="DOCUMENTACION_PROYECTO_2027.md"><i class="fa-solid fa-file-lines"></i> Documentación del proyecto</a></div>
+    </section>
+  </main>
+  <footer><p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p><p class="footer-japan">Made with <span aria-label="cariño">♥</span> for Japan 2027</p></footer>
   <script src="js/main.js"></script>
-</body>
-</html>
+</body></html>
