@@ -3,75 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog del Servidor | Viaje a Japón 2027</title>
+  <meta name="description" content="Diario interactivo de la aventura escolar Viaje a Japón 2027.">
+  <title>Diario de Japón | Viaje a Japón 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
-
-  <nav style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <button id="menu-toggle" class="btn-menu" title="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+  <nav class="blog-nav">
+    <button id="menu-toggle" class="btn-menu" title="Abrir menú" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links" id="nav-links">
       <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
       <a href="logistica.html"><i class="fa-solid fa-plane"></i> Logística</a>
       <a href="itinerario.html"><i class="fa-solid fa-map-location-dot"></i> Itinerario</a>
       <a href="tienda.html"><i class="fa-solid fa-shop"></i> Tienda</a>
-      <a href="blog.html" class="active"><i class="fa-solid fa-server"></i> Blog</a>
+      <a href="blog.html" class="active"><i class="fa-solid fa-book-open"></i> Diario</a>
       <a href="proyecto-tic.html"><i class="fa-solid fa-laptop-code"></i> Panel TIC</a>
     </div>
-    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+    <button id="theme-toggle" class="btn-theme" title="Modo Tokyo Night" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
   </nav>
 
-  <header>
-    <h1><i class="fa-solid fa-server"></i> Blog del Viaje</h1>
-    <p>Diario de nuestra aventura preparado para alojarse en el servidor local del proyecto.</p>
+  <header class="blog-hero">
+    <span class="blog-eyebrow"><i class="fa-solid fa-torii-gate"></i> TOKYO · HAKONE · KIOTO · NARA</span>
+    <h1>Diario de Japón</h1>
+    <p>Pequeños momentos, grandes recuerdos. La bitácora de nuestra aventura.</p>
+    <div class="blog-hero-actions">
+      <a href="#entradas" class="blog-primary-link"><i class="fa-solid fa-book-open"></i> Explorar entradas</a>
+      <button type="button" class="blog-quiet-button" id="open-gallery"><i class="fa-regular fa-images"></i> Galería de fotos</button>
+    </div>
+    <div class="blog-stats" aria-label="Estadísticas del diario">
+      <div><strong id="stat-posts">—</strong><span>Entradas</span></div>
+      <div><strong id="stat-photos">—</strong><span>Fotografías</span></div>
+      <div><strong id="stat-categories">—</strong><span>Categorías</span></div>
+    </div>
   </header>
 
-  <div class="container">
-    <!-- Formulario para escribir en el Diario (Backend) -->
-    <section style="margin-bottom: 2rem;">
-        <h2><i class="fa-solid fa-pen-to-square"></i> Nueva Entrada en el Diario</h2>
-        <form id="form-blog" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
-            <div>
-                <label for="titulo" style="display:block; margin-bottom:0.5rem; font-weight:bold;">Título del Artículo:</label>
-                <input type="text" id="titulo" required style="width:100%; padding:0.5rem; border-radius:4px; border:1px solid #ccc; background: var(--card-bg); color: var(--text);">
-            </div>
-            <div>
-                <label for="contenido" style="display:block; margin-bottom:0.5rem; font-weight:bold;">Contenido:</label>
-                <textarea id="contenido" rows="5" required style="width:100%; padding:0.5rem; border-radius:4px; border:1px solid #ccc; background: var(--card-bg); color: var(--text);"></textarea>
-            </div>
-            <div>
-                <label for="imagen" style="display:block; margin-bottom:0.5rem; font-weight:bold;">Enlace de la Imagen (URL):</label>
-                <input type="url" id="imagen" placeholder="https://imgur.com" style="width:100%; padding:0.5rem; border-radius:4px; border:1px solid #ccc; background: var(--card-bg); color: var(--text);">
-            </div>
-            <button type="submit" class="btn-theme" style="padding: 0.7rem 1.5rem; cursor: pointer; align-self: flex-start;">
-                <i class="fa-solid fa-cloud-arrow-up"></i> Publicar en Servidor Local
-            </button>
-        </form>
+  <main class="container blog-container">
+    <section class="blog-tools" aria-labelledby="tools-title">
+      <div class="section-heading">
+        <div><p class="blog-kicker">EL CUADERNO DE VIAJE</p><h2 id="tools-title">Encuentra una historia</h2></div>
+        <span class="live-indicator"><span></span> Diario conectado</span>
+      </div>
+      <div class="blog-filter-grid">
+        <label class="search-field" for="blog-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="blog-search" placeholder="Buscar por título o contenido…" autocomplete="off"></label>
+        <label class="category-field" for="category-filter"><span>Categoría</span><select id="category-filter"><option value="all">Todas las categorías</option></select></label>
+        <label class="sort-field" for="sort-filter"><span>Ordenar</span><select id="sort-filter"><option value="newest">Más recientes</option><option value="oldest">Más antiguas</option><option value="title">Título (A–Z)</option></select></label>
+      </div>
+      <div id="category-chips" class="category-chips" aria-label="Filtrar por categoría"></div>
     </section>
 
-    <!-- Contenedor donde aparecerán los artículos guardados -->
-    <section>
-        <h2><i class="fa-solid fa-network-wired"></i> Entradas del Diario (Desde HP ElitePad)</h2>
-        <div id="contenedor-posts" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1.5rem;">
-            <p id="cargando-posts"><i class="fa-solid fa-spinner fa-spin"></i> Conectando con el servidor local...</p>
-        </div>
+    <section id="admin-section" class="admin-section" hidden aria-labelledby="admin-title">
+      <div class="section-heading">
+        <div><p class="blog-kicker">SOLO ADMINISTRACIÓN</p><h2 id="admin-title"><i class="fa-solid fa-pen-to-square"></i> Escribe en el diario</h2></div>
+        <button type="button" id="logout-button" class="blog-outline-button"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</button>
+      </div>
+      <form id="form-blog" class="blog-form">
+        <input type="hidden" id="post-id">
+        <div class="form-field"><label for="titulo">Título <span>*</span></label><input type="text" id="titulo" maxlength="120" required placeholder="Ej. Atardecer en Shibuya"></div>
+        <div class="form-field"><label for="categoria">Categoría</label><select id="categoria"><option>Diario</option><option>Tokio</option><option>Hakone</option><option>Kioto</option><option>Nara</option><option>Comida</option><option>Consejos</option><option>Momentos</option></select><small>Puedes elegir una categoría o escribir una nueva.</small><input type="text" id="categoria-custom" maxlength="40" placeholder="Otra categoría (opcional)"></div>
+        <div class="form-field form-field-full"><label for="contenido">Tu historia <span>*</span></label><textarea id="contenido" rows="7" maxlength="20000" required placeholder="Cuenta qué pasó, qué descubriste o qué no quieres olvidar…"></textarea><div class="character-count"><span id="content-count">0</span> / 20.000 caracteres</div></div>
+        <div class="form-field form-field-full"><label for="imagen">URL de una fotografía (opcional)</label><input type="url" id="imagen" placeholder="https://…" inputmode="url"><small>Usa una dirección HTTPS pública. La imagen no se sube a la tablet.</small></div>
+        <div class="form-actions"><button type="submit" id="save-post" class="blog-primary-button"><i class="fa-solid fa-cloud-arrow-up"></i> Publicar entrada</button><button type="button" id="cancel-edit" class="blog-outline-button" hidden>Cancelar edición</button><p id="form-message" class="form-message" role="status" aria-live="polite"></p></div>
+      </form>
     </section>
-</div>
 
-  <footer>
-    <p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p>
-  </footer>
+    <section class="entries-section" id="entradas" aria-labelledby="entries-title">
+      <div class="section-heading entries-heading">
+        <div><p class="blog-kicker">DESDE LA TABLET HP ELITEPAD</p><h2 id="entries-title">Historias del viaje</h2></div>
+        <button type="button" id="login-toggle" class="blog-outline-button"><i class="fa-solid fa-lock"></i> Administración</button>
+      </div>
+      <div id="login-panel" class="login-panel" hidden>
+        <div class="login-panel-copy"><i class="fa-solid fa-shield-halved"></i><div><strong>Acceso de administrador</strong><p>Inicia sesión para publicar, editar o eliminar entradas.</p></div></div>
+        <form id="login-form" class="login-form"><label for="admin-password">Contraseña</label><input type="password" id="admin-password" autocomplete="current-password" minlength="14" required placeholder="Contraseña de administración"><button type="submit" id="login-button" class="blog-primary-button">Entrar</button></form>
+        <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+      </div>
+      <div id="blog-status" class="blog-status" role="status" aria-live="polite"><i class="fa-solid fa-spinner fa-spin"></i><span>Conectando con el diario…</span></div>
+      <div id="contenedor-posts" class="posts-grid"></div>
+      <div id="empty-filter-state" class="empty-state" hidden><i class="fa-solid fa-magnifying-glass"></i><h3>No hay historias con esos filtros</h3><p>Prueba otra búsqueda o selecciona otra categoría.</p><button type="button" id="clear-filters" class="blog-outline-button">Limpiar filtros</button></div>
+      <div class="blog-refresh-row"><button type="button" id="refresh-posts" class="blog-outline-button"><i class="fa-solid fa-rotate"></i> Actualizar diario</button><span id="last-updated"></span></div>
+    </section>
+  </main>
+
+  <footer><p>Proyecto Escolar de Tecnologías de la Información y la Comunicación (TIC)</p><p class="footer-japan">Made with <span aria-label="cariño">♥</span> for Japan 2027</p></footer>
+
+  <dialog id="post-dialog" class="blog-dialog" aria-labelledby="dialog-title"><button type="button" class="dialog-close" data-close="post-dialog" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button><article class="full-post"><img id="dialog-image" class="dialog-image" alt="" hidden><p class="blog-kicker" id="dialog-category"></p><h2 id="dialog-title"></h2><p class="full-post-date" id="dialog-date"></p><div class="full-post-content" id="dialog-content"></div></article></dialog>
+  <dialog id="gallery-dialog" class="blog-dialog gallery-dialog" aria-labelledby="gallery-title"><button type="button" class="dialog-close" data-close="gallery-dialog" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button><div class="gallery-dialog-header"><p class="blog-kicker">RECUERDOS EN IMÁGENES</p><h2 id="gallery-title">Galería del viaje</h2><p id="gallery-count"></p></div><div id="gallery-grid" class="gallery-grid"></div><p id="gallery-empty" class="gallery-empty" hidden>Aún no hay fotografías en el diario. Las imágenes de las entradas aparecerán aquí.</p></dialog>
 
   <script src="js/main.js"></script>
-<!-- Nuevo script exclusivo para conectar con la API de la tablet -->
+  <script src="js/blog-config.js"></script>
   <script src="js/blog.js"></script>
-</body>
-</html>
-
 </body>
 </html>
