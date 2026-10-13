@@ -3,7 +3,6 @@
 **Proyecto:** Viaje a Japón 2027  
 **Asignatura:** Tecnologías de la Información y la Comunicación (TIC)  
 **Frontend público:** <https://srgusa15.github.io/Web_proyecto_viaje_tic/>  
-**Repositorio:** <https://github.com/SrGusa15/Web_proyecto_viaje_tic>  
 **Versión de esta documentación:** octubre de 2026
 
 > Esta documentación describe los archivos incluidos en esta entrega. Los horarios, vuelos y alojamientos son los datos de planificación presentes en el proyecto y se deben contrastar con las confirmaciones oficiales antes del viaje.
