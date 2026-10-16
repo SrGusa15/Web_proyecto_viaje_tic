@@ -31,7 +31,6 @@ Todas las páginas comparten una navegación adaptable, un selector de tema y un
 ```text
 Web_proyecto_viaje_tic/
 ├── README.md
-├── DOCUMENTACION_PROYECTO_2027.md
 ├── app.py
 ├── requirements.txt
 ├── .env.example
